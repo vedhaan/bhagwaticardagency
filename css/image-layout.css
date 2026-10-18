@@ -1,0 +1,50 @@
+/* IMAGE LAYOUT ONLY
+   Put image URLs in HTML <img src="">.
+   This file ONLY controls how images fit their box (size/crop).
+   No image URLs should be added here.
+
+   IMPORTANT: All rules below use PERCENTAGE sizing (not fixed px),
+   so every image automatically resizes with its box on every
+   screen size (mobile, tablet, desktop) - this is what makes the
+   images fully responsive with no cutting/overflow.
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Product / Category / Gallery / Blog boxes (.thumb) */
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Multi-image product slider (4 images per card, auto-rotating) */
+.thumb[data-slider] img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+}
+.thumb[data-slider] img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Logo mark (header + footer) */
+.mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 999px;
+  display: block;
+}

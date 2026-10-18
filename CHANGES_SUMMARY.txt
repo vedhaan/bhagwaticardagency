@@ -1,0 +1,145 @@
+BHAGWATI CARD AGENCY WEBSITE - CHANGES SUMMARY (LATEST ROUND)
+================================================================
+Neeche har change ka poora detail hai - kya change hua, kaunsi
+file mein, aur agar aapko khud future mein kuch edit karna ho
+(phone number, email, WhatsApp number) to KAHA jaake karna hai.
+
+------------------------------------------------
+1. GALLERY - Products badhaye + Filter buttons ab kaam karte hain
+------------------------------------------------
+File: gallery.html, js/filters.js
+Kya kiya:
+- Gallery mein pehle 12 items the, ab 24 items hain.
+- Upar ke chips (All / Wedding / Foil / Laser Cut / Boxes /
+  Corporate / Packaging) par click karte hi sirf us category ke
+  items dikhte hain - baaki hide ho jaate hain. "All" par click
+  karne se sab wapas dikh jaate hain.
+- Agar koi category khaali ho to "No pieces match this filter"
+  message dikhta hai.
+Naya product add karna ho gallery mein: HTML mein
+  <figure class="card reveal" data-tag="Wedding"> jaisa ek naya
+  block copy-paste karke apni image/naam/tag daal dena - filter
+  automatically usko bhi handle kar lega.
+
+------------------------------------------------
+2. "CRAFT YOU CAN FEEL BEFORE YOU READ IT" - Mobile scroll
+------------------------------------------------
+Files: style.css, wedding-cards.html, invitation-cards.html,
+  gift-covers.html, wedding-accessories.html,
+  corporate-printing.html, packaging-printing.html
+Kya kiya:
+- Ye "Why Bhagwati" section (3 panels: Since 1987, In-house
+  finishing, On-time always) ab mobile/tablet par side-scroll
+  (swipe) karke dekh sakte ho, jaise reviews section mein hai.
+- Desktop par pehle jaisa hi 3-column grid dikhta hai.
+
+------------------------------------------------
+3. CUSTOMER REVIEWS - Khud review add karne ka option
+------------------------------------------------
+Files: index.html, js/filters.js
+Kya kiya:
+- Homepage ke reviews section ke neeche ek chhota form hai
+  (Name, Occasion/City, Review text) - koi bhi visitor apna
+  review likh kar submit kar sakta hai.
+- Submit karte hi unka review turant baaki reviews ke side-by-side
+  add ho jaata hai (jaisa abhi dikh raha hai, wesa hi).
+
+IMPORTANT LIMITATION (please note): Ye ek plain website hai,
+iske paas koi server/database nahi hai. Isliye jo review ek
+visitor apne phone/laptop se submit karega, wo SIRF unhi ke
+browser mein save hota hai (agli baar wahi visitor site kholega
+to unka review dikhega) - lekin doosre visitors ko wo review
+apne aap nahi dikhega. Sabke liye ek jaisa review dikhane ke
+liye website ko ek real backend/database chahiye hoga (ye is
+static file version mein possible nahi hai bina external
+service/hosting ke).
+
+------------------------------------------------
+4. EMAIL SYSTEM - Newsletter + Contact form
+------------------------------------------------
+Files: js/filters.js, index.html, contact.html
+
+>>> EMAIL ADDRESS KAHA CHANGE KARNI HAI <<<
+File: js/filters.js - sabse UPAR line dekho:
+    const OWNER_EMAIL = "hardikjosh8@gmail.com";
+Bas isi ek line mein email badal dena jab bhi chahiye - newsletter
+aur contact form dono automatically naya email use karenge.
+
+Kya kiya:
+- Homepage "Stay in touch" (newsletter) form: koi email daal kar
+  Subscribe dabata hai to unka email app (Gmail/Outlook wagera)
+  khul jaata hai, aapke email (OWNER_EMAIL) ko address kiya hua,
+  subscriber ka email already bhara hua - unhe bas "Send" dabana
+  hai.
+- Contact page "Send an enquiry" form: Name, Email, Phone,
+  Interested-in, Message bhar kar submit karte hi wahi tarika -
+  unka email app khulega, saari details already bhari hui, bas
+  "Send" dabana hai.
+
+IMPORTANT LIMITATION (please note): Website ke paas server nahi
+hai, isliye JavaScript khud email bhej NAHI sakta silently.
+Upar wala tarika (visitor ke email app ko kholna, pre-filled
+message ke saath) hi ek tareeka hai bina kisi paid backend/
+service ke. Agar aapko chahiye ki visitor sirf ek button dabaye
+aur unhe khud "Send" na karna pade (bilkul silent), uske liye
+ek chhota backend/server ya third-party form service chahiye
+hoga - wo abhi is plain HTML/CSS/JS file mein possible nahi hai.
+
+------------------------------------------------
+5. WHATSAPP INQUIRY - Ab poori details jaati hain
+------------------------------------------------
+Files: wedding-cards.html, invitation-cards.html, gift-covers.html,
+  wedding-accessories.html, corporate-printing.html,
+  packaging-printing.html, printing-services.html
+
+Kya kiya:
+- Pehle "Enquire" button dabane par WhatsApp message mein sirf
+  product ka naam jaata tha.
+- Ab har product ke message mein: Product Name + Material/Fabric
+  (jaise "Handmade Paper", "Velvet" wagera) + Price - sab jaata
+  hai automatically.
+- Printing Services page ke items mein: Service Name + Category +
+  Details (description) jaata hai.
+
+>>> WHATSAPP NUMBER KAHA CHANGE KARNA HAI <<<
+Sabhi HTML files mein number "918160008957" (bina + ya space ke,
+WhatsApp link format mein) likha hua hai. Kisi bhi file mein
+Ctrl+F / Find se "918160008957" search karke sab jagah naya
+number daal dena (jitni jagah milega utni jagah replace karna).
+Display wala number (jaise "+91 81600 08957", jo screen par dikhta
+hai) bhi alag se same tarike se search karke change kar sakte ho.
+
+LIMITATION: WhatsApp ka link (wa.me) sirf TEXT bhej sakta hai -
+product ki IMAGE automatically attach nahi ho sakti kisi bhi link
+se. Ye WhatsApp ki apni limitation hai. Photo ke liye customer ko
+khud WhatsApp mein image manually bhejni padegi, ya aapko WhatsApp
+Business API (paid, alag setup) chahiye hoga.
+
+------------------------------------------------
+6. HOMEPAGE STATS - Ab mobile mein center
+------------------------------------------------
+File: style.css
+Kya kiya:
+- "39+ Years of craft", "40k+ Families served", "45+ Printing
+  techniques", "12 Languages typeset" - ye 4 numbers pehle mobile
+  view mein left-aligned the, ab center mein hain (desktop pe
+  pehle se hi center tha, wahi rakha hai).
+
+================================================================
+SABHI CHANGES FULLY RESPONSIVE HAIN - mobile, tablet, laptop,
+desktop, sabhi devices par test kiya gaya hai (320px se 1440px
+tak, koi bhi page horizontally scroll nahi karta).
+================================================================
+
+
+PREVIOUS ROUND KE CHANGES (SUMMARY):
+- Product cards ka beech wala description text hataya, image
+  bada dikhta hai mobile/tablet mein.
+- Sabhi 15 pages mein 3-image auto-rotating hero banner slider.
+- animations.js mein 3 animations: scroll-reveal, stat-counter,
+  product-image-auto-slider - sab comment ke saath.
+- 6 category pages mein har ek mein 20-20 products, har product
+  ke 4 auto-rotating images.
+- Search + Filter (naam se search, religion/material dropdown,
+  price sort) - ab kaam karta hai (js/filters.js).
+- Phone number sabhi jagah +91 81600 08957 kar diya gaya tha.

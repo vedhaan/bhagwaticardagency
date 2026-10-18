@@ -1,0 +1,83 @@
+BHAGWATI CARD AGENCY - EXACT IMAGE FILE LIST
+==================================================
+
+Har box/logo ab <img> tag use karta hai. Bas neeche diye gaye
+exact file name se image save karo - box automatically image
+dikhayega. Ye ab FULLY RESPONSIVE hai (percentage-based sizing)
+- mobile, tablet, desktop sabhi devices me image box ke andar
+proper fit hogi, cut nahi hogi.
+
+--- LOGO (header + footer, both use same image) ---
+Folder: images/logo/
+  images/logo/logo.jpg
+  (Recommended: square image, e.g. 200x200px, since it's circular)
+
+--- CATEGORIES (home page + categories page ke 8 tiles) ---
+Folder: images/categories/
+  images/categories/commercial-printing.jpg
+  images/categories/corporate-printing.jpg
+  images/categories/customized-printing.jpg
+  images/categories/invitation-cards.jpg
+  images/categories/packaging-printing.jpg
+  images/categories/premium-gift-covers.jpg
+  images/categories/wedding-accessories.jpg
+  images/categories/wedding-invitation-cards.jpg
+
+--- PRODUCTS (individual card/item images) ---
+Folder: images/products/
+  images/products/anand-karaj-khanda-gold-card.jpg
+  images/products/birthday-confetti-foil-card.jpg
+  images/products/blush-acrylic-christian-invite.jpg
+  images/products/champagne-foil-gift-cover-set.jpg
+  images/products/corporate-diary-planner-set.jpg
+  images/products/corporate-gala-invitation-suite.jpg
+  images/products/custom-product-carton-printing.jpg
+  images/products/embossed-visiting-cards-500-pcs.jpg
+  images/products/emerald-eid-gift-envelope.jpg
+  images/products/emerald-nikah-scroll-card.jpg
+  images/products/executive-letterhead-suite.jpg
+  images/products/gold-trousseau-packing-box.jpg
+  images/products/golden-ring-engagement-card.jpg
+  images/products/griha-pravesh-housewarming-card.jpg
+  images/products/ivory-laser-cut-mandala-card.jpg
+  images/products/jain-shubh-vivah-handmade-card.jpg
+  images/products/luxury-paper-shopping-bag.jpg
+  images/products/maroon-mughal-foil-invitation.jpg
+  images/products/pastel-baby-shower-invitation.jpg
+  images/products/pearl-ivory-money-envelope.jpg
+  images/products/personalised-wedding-tags-seals.jpg
+  images/products/reception-minimal-ivory-invite.jpg
+  images/products/rigid-magnetic-gift-box.jpg
+  images/products/royal-blue-wooden-keepsake-card.jpg
+  images/products/satin-ribbon-favour-box-set-of-25.jpg
+  images/products/tri-fold-brochure-170gsm-art.jpg
+  images/products/velvet-box-wedding-invitation.jpg
+  images/products/velvet-ring-platter-with-foil-motif.jpg
+  images/products/velvet-shagun-cover-maroon.jpg
+  images/products/wedding-mithai-box-gold-foil.jpg
+
+--- GALLERY (portfolio page ke 12 items) ---
+Folder: images/gallery/
+  images/gallery/brand-stationery.jpg
+  images/gallery/corporate-diary.jpg
+  images/gallery/gold-tags-seals.jpg
+  images/gallery/letterpress-menu.jpg
+  images/gallery/mandala-laser-card.jpg
+  images/gallery/mithai-packaging.jpg
+  images/gallery/mughal-foil-suite.jpg
+  images/gallery/nikah-scroll.jpg
+  images/gallery/rigid-gift-box.jpg
+  images/gallery/shagun-covers.jpg
+  images/gallery/trousseau-box.jpg
+  images/gallery/velvet-box-invite.jpg
+
+--- BLOG (blog page ke 6 articles) ---
+Folder: images/blog/
+  images/blog/12-wedding-invitation-trends-defining-2026.jpg
+  images/blog/building-a-corporate-stationery-system-that-lasts.jpg
+  images/blog/foil-emboss-or-letterpress-which-finish-should-you-pick.jpg
+  images/blog/inside-our-chandni-chowk-press.jpg
+  images/blog/the-complete-paper-gsm-guide-for-invitations.jpg
+  images/blog/wording-etiquette-for-indian-wedding-invitations.jpg
+
+Recommended size for products/categories/gallery/blog: 800x600px (4:3 ratio)

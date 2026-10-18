@@ -1,0 +1,36 @@
+=== NEW SECTIONS ADDED - IMAGE FILE LIST ===
+
+--- HERO SLIDER (homepage top banner, 3 slides) ---
+Folder: images/hero/
+  images/hero/slide-1.jpg
+  images/hero/slide-2.jpg
+  images/hero/slide-3.jpg
+  (Recommended: wide landscape photos, 1600x900px or bigger)
+
+--- HOMEPAGE PRINTING SECTION (8 cards, under 'Capabilities') ---
+Folder: images/printing/
+  images/printing/wedding-card-printing.jpg
+  images/printing/invitation-envelope-printing.jpg
+  images/printing/foil-emboss-printing.jpg
+  images/printing/business-stationery-printing.jpg
+  images/printing/brochure-catalogue-printing.jpg
+  images/printing/offset-digital-printing.jpg
+  images/printing/packaging-box-printing.jpg
+  images/printing/certificate-tag-printing.jpg
+
+--- PRINTING SERVICES PAGE (12 cards, printing-services.html) ---
+Folder: images/printing-services/
+  images/printing-services/wedding-card-printing.jpg
+  images/printing-services/invitation-envelope-printing.jpg
+  images/printing-services/certificate-tag-printing.jpg
+  images/printing-services/digital-offset-printing.jpg
+  images/printing-services/screen-letterpress-printing.jpg
+  images/printing-services/foil-printing.jpg
+  images/printing-services/emboss-deboss-printing.jpg
+  images/printing-services/business-card-letterhead-printing.jpg
+  images/printing-services/invoice-bill-receipt-books.jpg
+  images/printing-services/brochure-catalogue-printing.jpg
+  images/printing-services/book-magazine-printing.jpg
+  images/printing-services/packaging-rigid-box-printing.jpg
+
+Recommended size for all cards: 800x600px (4:3 ratio)

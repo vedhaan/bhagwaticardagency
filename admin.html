@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Admin | Bhagwati Card Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      padding-bottom: 4rem;
+    }
+
+    .bar {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 1rem 0;
+    }
+
+    .bar>* {
+      width: auto;
+      flex: 1 1 12rem;
+    }
+
+    .bar .btn,
+    .bar button {
+      flex: 0 0 auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+
+    th,
+    td {
+      padding: .5rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    td img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    td input[type=checkbox],
+    .chk {
+      width: auto;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: .8rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media(min-width:768px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .span2 {
+        grid-column: 1/-1;
+      }
+    }
+
+    .form-grid label {
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: .25rem;
+    }
+
+    .imgs {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+    }
+
+    .imgs figure {
+      width: 9rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .4rem;
+      text-align: center;
+    }
+
+    .imgs img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .imgs button {
+      font-size: .7rem;
+      margin: .2rem .1rem 0;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 999px;
+      padding: .2rem .6rem;
+    }
+
+    .msg {
+      margin-top: .6rem;
+      font-size: .85rem;
+      color: var(--maroon);
+    }
+
+    .tabs button {
+      margin-right: .4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login" class="container" style="max-width:26rem;padding-block:4rem">
+    <h1>Admin login</h1>
+    <div class="rule"></div>
+    <form id="loginForm" style="display:grid;gap:.8rem">
+      <input id="email" type="email" placeholder="Email" required />
+      <input id="password" type="password" placeholder="Password" required />
+      <button class="btn" type="submit">Sign in</button>
+      <p class="msg" id="loginMsg"></p>
+    </form>
+  </div>
+
+  <div id="app" class="container hidden" style="padding-top:2rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <h1>Product admin</h1>
+      <button class="btn sm outline" id="logout" type="button">Log out</button>
+    </div>
+    <div class="tabs bar">
+      <button class="btn sm" data-tab="products" type="button">Products</button>
+      <button class="btn sm outline" data-tab="categories" type="button">Categories</button>
+    </div>
+
+    <!-- PRODUCTS: list -->
+    <div id="tab-products">
+      <div id="listView">
+        <div class="bar">
+          <input id="s" placeholder="Search by name" />
+          <select id="scat">
+            <option value="">All categories</option>
+          </select>
+          <button class="btn" id="addBtn" type="button">+ Add product</button>
+        </div>
+        <p class="muted" id="count"></p>
+        <div style="overflow-x:auto">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Live</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PRODUCTS: form -->
+      <form id="formView" class="hidden panel" novalidate>
+        <h2 id="formTitle">Add product</h2>
+        <div class="rule"></div>
+        <div class="form-grid">
+          <div class="span2"><label>Name *</label><input id="f_name" required /></div>
+          <div><label>URL slug (auto)</label><input id="f_slug" placeholder="auto-from-name" /></div>
+          <div><label>Category *</label><select id="f_category"></select></div>
+          <div><label>Material</label><input id="f_material" list="dl_mat" /></div>
+          <div><label>Faith (wedding/invitation only)</label><input id="f_faith" list="dl_faith" /></div>
+          <div><label>Price (₹ per piece) *</label><input id="f_price" type="number" min="0" step="0.01" /></div>
+          <div><label>Minimum order qty</label><input id="f_min" type="number" min="1" value="1" /></div>
+          <div><label>Tag</label><select id="f_tag">
+              <option value="">None</option>
+              <option>Trending</option>
+              <option>Bestseller</option>
+            </select></div>
+          <div><label>Card colour (placeholder bg)</label><select id="f_color">
+              <option>maroon</option>
+              <option>gold</option>
+              <option>ivory</option>
+              <option>ink</option>
+            </select></div>
+          <div class="span2"><label>Dimensions</label><input id="f_dim" /></div>
+          <div class="span2"><label>Description</label><textarea id="f_desc" rows="4"></textarea></div>
+          <div><label>Sort order (lower = earlier)</label><input id="f_sort" type="number" value="0" /></div>
+          <div><label>&nbsp;</label><label style="text-transform:none;letter-spacing:0"><input id="f_active" class="chk"
+                type="checkbox" checked /> Show on website</label></div>
+          <div class="span2">
+            <label>Images (first = cover). They are compressed automatically.</label>
+            <input id="f_files" type="file" accept="image/*" multiple />
+            <div class="imgs" id="imgs" style="margin-top:.8rem"></div>
+          </div>
+        </div>
+        <div class="bar"><button class="btn" type="submit" id="saveBtn">Save</button>
+          <button class="btn outline" type="button" id="cancelBtn">Cancel</button>
+        </div>
+        <p class="msg" id="formMsg"></p>
+      </form>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div id="tab-categories" class="hidden">
+      <div class="panel">
+        <div class="bar"><select id="c_sel"></select></div>
+        <div class="form-grid">
+          <div><label>Default minimum order qty</label><input id="c_min" type="number" min="1" /></div>
+          <div class="span2"><label>Return &amp; replacement policy</label><textarea id="c_policy" rows="4"></textarea>
+          </div>
+          <div class="span2"><label>FAQs: one per line, format: Question || Answer</label><textarea id="c_faqs"
+              rows="8"></textarea></div>
+        </div>
+        <div class="bar"><button class="btn" id="c_save" type="button">Save category</button></div>
+        <p class="msg" id="c_msg"></p>
+      </div>
+    </div>
+
+  <div id="tab-reviews" class="hidden">
+  <div class="bar"><select id="r_filter">
+    <option value="pending">Pending approval</option><option value="approved">Approved</option><option value="all">All</option>
+  </select></div>
+  <div id="r_list"></div>
+</div>
+
+    <button class="btn sm outline" data-tab="reviews" type="button">Reviews <span id="r_badge"></span></button>
+  </div>
+
+  <datalist id="dl_mat">
+    <option>Handmade Paper</option>
+    <option>Velvet</option>
+    <option>Silk Cloth</option>
+    <option>Metallic Board</option>
+    <option>Acrylic</option>
+    <option>Wooden</option>
+  </datalist>
+  <datalist id="dl_faith">
+    <option>Hindu</option>
+    <option>Muslim</option>
+    <option>Jain</option>
+    <option>Sikh</option>
+    <option>Christian</option>
+  </datalist>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

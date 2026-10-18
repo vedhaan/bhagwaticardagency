@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- COPY head from wedding-cards.html; leave <title> as "Product | Bhagwati Card Agency" (JS updates it) -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title>
+    <link rel="canonical" href="https://bhagwaticardagency.in/wedding-cards.html" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/image-layout.css" />
+</head>
+
+<body>
+    <!-- COPY announce + topbar + mobile panel from wedding-cards.html -->
+    <div class="announce">
+        Handcrafted since 1987 · Free sample kit on orders above ₹10,000 ·
+        Worldwide shipping
+    </div>
+    <div class="topbar">
+        <div class="container nav">
+            <a class="logo" href="index.html"><span class="mark"><img src="images/logo/logo.jpg"
+                        alt="Bhagwati Card Agency Logo" loading="lazy" /></span><span><span
+                        class="name">Bhagwati</span><span class="sub">Card Agency</span></span></a>
+            <nav class="menu desktop-menu">
+                <a href="index.html">Home</a><a href="wedding-cards.html" class="active">Wedding Cards</a><a
+                    href="invitation-cards.html">Invitations</a><a href="gift-covers.html">Gift Covers</a><a
+                    href="printing-services.html">Printing</a><a href="gallery.html">Gallery</a><a
+                    href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+            </nav>
+            <div class="actions">
+                <a class="btn sm" href="contact.html">Enquire</a><label class="mobile-trigger" for="mobile-toggle"
+                    aria-label="Open menu">☰</label>
+            </div>
+        </div>
+        <input class="mobile-toggle" type="checkbox" id="mobile-toggle" aria-hidden="true" />
+        <div class="mobile-panel">
+            <div class="container">
+                <a href="index.html">Home</a><a href="wedding-cards.html">Wedding Cards</a><a
+                    href="invitation-cards.html">Invitations</a><a href="gift-covers.html">Gift Covers</a><a
+                    href="printing-services.html">Printing</a><a href="gallery.html">Gallery</a><a
+                    href="blog.html">Blog</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="page active">
+            <div class="page active">
+                <div id="app">
+                    <section class="section">
+                        <div class="container center muted">Loading…</div>
+                    </section>
+                </div>
+
+                <!-- Reviews stay static so filters.js can bind the form -->
+                <section class="section reveal">
+                    <div class="container">
+                        <p class="eyebrow">Reviews</p>
+                        <div class="rule"></div>
+                        <h2 id="reviewsTitle" style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.5rem">
+                            Customer reviews</h2>
+                        <div class="grid g2 reviews-grid" id="allReviewsGrid">
+                            <div class="panel reveal visible"
+                                style="grid-column: 1 / -1; text-align: center; color: var(--muted)">
+                                Be the first to review this piece.
+                            </div>
+                        </div>
+                        <div class="panel reveal" style="max-width: 32rem; margin: 3rem auto 0">
+                            <h3 style="font-size: 1.15rem">Share your experience</h3>
+                            <div class="rule"></div>
+                            <!-- COPY the <form id="reviewForm"> ... </form> from product-maroon-mughal-foil-invitation.html
+                     exactly, but remove its data-storage-key attribute (product.js sets it) -->
+
+                            <form id="reviewForm" data-storage-key="bhagwati_reviews_maroon-mughal-foil-invitation"
+                                novalidate>
+                                <div style="display: grid; gap: 0.4rem; margin-top: 1rem">
+                                    <input type="text" id="reviewName" placeholder="Your name" />
+                                    <p class="field-error" id="reviewNameError"></p>
+                                    <input type="text" id="reviewOccasion" placeholder="City / Occasion" />
+                                    <p class="field-error" id="reviewOccasionError"></p>
+                                    <div class="star-rating-field">
+                                        <span class="meta">Your rating</span>
+                                        <div class="star-rating" role="radiogroup" aria-label="Star rating">
+                                            <input type="radio" id="r5" name="reviewRating" value="5" checked /><label
+                                                for="r5" title="5 stars">&#9733;</label>
+                                            <input type="radio" id="r4" name="reviewRating" value="4" /><label for="r4"
+                                                title="4 stars">&#9733;</label>
+                                            <input type="radio" id="r3" name="reviewRating" value="3" /><label for="r3"
+                                                title="3 stars">&#9733;</label>
+                                            <input type="radio" id="r2" name="reviewRating" value="2" /><label for="r2"
+                                                title="2 stars">&#9733;</label>
+                                            <input type="radio" id="r1" name="reviewRating" value="1" /><label for="r1"
+                                                title="1 star">&#9733;</label>
+                                        </div>
+                                    </div>
+                                    <textarea id="reviewText" rows="3" placeholder="Write your review..."
+                                        style="width: 100%; font-family: inherit; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); resize: vertical;"></textarea>
+                                    <input type="text" id="reviewWebsite" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+                                    <p class="field-error" id="reviewTextError"></p>
+                                    <button class="btn sm" type="submit"
+                                        style="justify-self: start; margin-top: 0.3rem">Submit review</button>
+                                    <p id="reviewMsg" class="meta" style="color: var(--gold); display: none"></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="grid g4">
+                <div>
+                    <div class="logo" style="color: #e9e2d6">
+                        <span class="mark"><img src="images/logo/logo.jpg" alt="Bhagwati Card Agency Logo"
+                                loading="lazy" /></span><span><span class="name">Bhagwati</span><span class="sub">Card
+                                Agency</span></span>
+                    </div>
+                    <p style="margin-top: 1rem; color: #a89f92">
+                        Luxury wedding invitations, gift covers and fine commercial
+                        printing from Chandni Chowk, Delhi — since 1987.
+                    </p>
+                </div>
+                <div>
+                    <h4>Collections</h4>
+                    <a href="wedding-cards.html">Wedding Cards</a><a href="invitation-cards.html">Invitation Cards</a><a
+                        href="gift-covers.html">Gift Covers</a><a href="wedding-accessories.html">Wedding
+                        Accessories</a><a href="corporate-printing.html">Corporate Printing</a><a
+                        href="packaging-printing.html">Packaging
+                        Printing</a>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <a data-link="" href="about.html">About Us</a><a data-link="" href="gallery.html">Gallery</a><a
+                        data-link="" href="blog.html">Blog</a>
+                    <a data-link="" href="faq.html">FAQ</a><a data-link="" href="contact.html">Contact</a>
+                    <a data-link="" href="privacy-policy.html">Privacy Policy</a><a data-link=""
+                        href="terms.html">Terms</a>
+                </div>
+                <div>
+                    <h4>Visit the studio</h4>
+                    <p style="color: #c9c2b6">
+                        Shop 14, Chandni Chowk Market,<br />New Delhi 110006, India
+                    </p>
+                    <p style="margin-top: 0.6rem">
+                        <a href="tel:+918160008957">+91 81600 08957</a>
+                    </p>
+                    <p>
+                        <a href="mailto:hello@bhagwaticardagency.in">hello@bhagwaticardagency.in</a>
+                    </p>
+                    <p style="color: #a89f92; margin-top: 0.6rem">
+                        Mon–Sat 10:00–20:30 · Sun 11:00–17:00
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Bhagwati Card Agency. All rights reserved.</span><span>GSTIN 07AABCB1234C1Z5</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COPY footer from wedding-cards.html -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/product.js"></script>
+    <script src="animations.js" defer></script>
+    <script src="js/image-animation.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+
+</html>

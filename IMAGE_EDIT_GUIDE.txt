@@ -1,0 +1,28 @@
+BHAGWATI CARD AGENCY - IMAGE EDITING GUIDE
+
+All image URLs/paths should be managed from HTML.
+
+1. Open the required .html page.
+2. Search for "IMAGE EDIT AREA".
+3. Find the <img src="..."> tag for the image you want to change.
+4. Replace only the src path.
+
+Example:
+<img src="images/cards/wedding-card.jpg" alt="Wedding invitation card">
+
+CSS:
+css/image-layout.css
+- ONLY controls image width, height and object-fit.
+- No image URLs should be added here.
+
+JavaScript:
+js/image-animation.js
+- ONLY handles image hover animation.
+- No image URLs should be added here.
+
+If you add a new image:
+1. Put the image inside the images/ folder.
+2. Add this directly in the relevant HTML:
+   <img src="images/your-file.jpg" alt="Descriptive text">
+
+This keeps image replacement simple: HTML = image, CSS = size, JS = animation.

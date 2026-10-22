@@ -2947,158 +2947,636 @@ html.hm-reveal-ready .hm-deal:not(.hm-in) .hm-tn__hang {
 /* =========================================================
    REVIEWS v3: the guest book
    ========================================================= */
-.hm-rv { background: #fffdf8; padding: clamp(2.8rem, 5vw, 4.8rem) 0 clamp(3.4rem, 5vw, 5rem); }
-.hm-rv__head { text-align: center; max-width: 36rem; margin: 0 auto clamp(1.6rem, 3vw, 2.4rem); }
-.hm-rv h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-size: clamp(2rem, 3.6vw, 3rem);
-  line-height: 1.06;
-  color: #5e1a28;
-  margin: 0 0 0.5rem;
+.hm-rv {
+    background: #fffdf8;
+    padding: clamp(2.8rem, 5vw, 4.8rem) 0 clamp(3.4rem, 5vw, 5rem);
 }
-.hm-rv__head p { font-family: "Jost", sans-serif; font-size: 1rem; line-height: 1.6; color: #6b6158; margin: 0; }
+
+.hm-rv__head {
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.hm-rv h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1.06;
+    color: #5e1a28;
+    margin: 0 0 0.5rem;
+}
+
+.hm-rv__head p {
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6b6158;
+    margin: 0;
+}
 
 /* the cover */
 .hm-gb {
-  position: relative;
-  padding: 14px;
-  border-radius: 0.6rem;
-  background: linear-gradient(135deg, #6e1f31, #3a0f19);
-  box-shadow: 0 30px 50px -28px rgba(40, 10, 20, 0.65);
+    position: relative;
+    padding: 14px;
+    border-radius: 0.6rem;
+    background: linear-gradient(135deg, #6e1f31, #3a0f19);
+    box-shadow: 0 30px 50px -28px rgba(40, 10, 20, 0.65);
 }
+
 .hm-gb::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px dashed rgba(240, 207, 122, 0.55);
-  border-radius: 0.4rem;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px dashed rgba(240, 207, 122, 0.55);
+    border-radius: 0.4rem;
+    pointer-events: none;
 }
+
 /* ribbon bookmark */
 .hm-gb::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -24px;
-  width: 16px;
-  height: 44px;
-  margin-left: -8px;
-  background: linear-gradient(90deg, #9c7421, #e9c46a, #9c7421);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -24px;
+    width: 16px;
+    height: 44px;
+    margin-left: -8px;
+    background: linear-gradient(90deg, #9c7421, #e9c46a, #9c7421);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%);
 }
 
 /* the pages: ruled lines, red margin, spine shadow (2rem line pitch) */
 .hm-gb #homeReviews {
-  display: block;
-  column-count: 2;
-  column-gap: 0;
-  gap: 0;
-  grid-template-columns: none;
-  position: relative;
-  padding: 2rem 0 0;
-  border-radius: 0.2rem;
-  background:
-    linear-gradient(90deg, transparent calc(50% - 1.6rem), rgba(70, 45, 20, 0.12) 50%, transparent calc(50% + 1.6rem)),
-    linear-gradient(90deg,
-      transparent 2.6rem, rgba(196, 70, 70, 0.4) 2.6rem, rgba(196, 70, 70, 0.4) calc(2.6rem + 1px), transparent calc(2.6rem + 1px),
-      transparent calc(50% + 2.6rem), rgba(196, 70, 70, 0.4) calc(50% + 2.6rem), rgba(196, 70, 70, 0.4) calc(50% + 2.6rem + 1px), transparent calc(50% + 2.6rem + 1px)),
-    repeating-linear-gradient(180deg, transparent 0 calc(2rem - 1px), rgba(120, 150, 190, 0.35) calc(2rem - 1px) 2rem),
-    #fffaf0;
-  box-shadow: 0 3px 0 #efe4cb, 0 6px 0 #e2d3b0;
+    display: block;
+    column-count: 2;
+    column-gap: 0;
+    gap: 0;
+    grid-template-columns: none;
+    position: relative;
+    padding: 2rem 0 0;
+    border-radius: 0.2rem;
+    background:
+        linear-gradient(90deg, transparent calc(50% - 1.6rem), rgba(70, 45, 20, 0.12) 50%, transparent calc(50% + 1.6rem)),
+        linear-gradient(90deg,
+            transparent 2.6rem, rgba(196, 70, 70, 0.4) 2.6rem, rgba(196, 70, 70, 0.4) calc(2.6rem + 1px), transparent calc(2.6rem + 1px),
+            transparent calc(50% + 2.6rem), rgba(196, 70, 70, 0.4) calc(50% + 2.6rem), rgba(196, 70, 70, 0.4) calc(50% + 2.6rem + 1px), transparent calc(50% + 2.6rem + 1px)),
+        repeating-linear-gradient(180deg, transparent 0 calc(2rem - 1px), rgba(120, 150, 190, 0.35) calc(2rem - 1px) 2rem),
+        #fffaf0;
+    box-shadow: 0 3px 0 #efe4cb, 0 6px 0 #e2d3b0;
 }
 
 /* each entry: every line is exactly 2rem so text sits on the ruled lines */
 .hm-gb #homeReviews .panel {
-  display: block;
-  margin: 0 0 2rem;
-  padding: 0 2rem 0 4rem;
-  background: none;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  opacity: 1;
-  transform: none;
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
+    display: block;
+    margin: 0 0 2rem;
+    padding: 0 2rem 0 4rem;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 }
-.hm-gb #homeReviews .panel .rule { display: none; }
+
+.hm-gb #homeReviews .panel .rule {
+    display: none;
+}
 
 .hm-gb #homeReviews .star-display {
-  display: block;
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 2rem;
-  letter-spacing: 0.22em;
-  color: #c9a24a;
+    display: block;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 2rem;
+    letter-spacing: 0.22em;
+    color: #c9a24a;
 }
+
 .hm-gb #homeReviews .quote {
-  margin: 0;
-  font-family: "Kalam", "Segoe Print", "Bradley Hand", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.1rem;
-  line-height: 2rem;
-  color: #2a3a6b;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    margin: 0;
+    font-family: "Kalam", "Segoe Print", "Bradley Hand", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #2a3a6b;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-.hm-gb #homeReviews .panel > p:not(.quote):not(.meta) {
-  margin: 0;
-  text-align: right;
-  font-family: "Kalam", "Segoe Print", "Bradley Hand", sans-serif;
-  font-weight: 700 !important;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: #2a3a6b;
+
+.hm-gb #homeReviews .panel>p:not(.quote):not(.meta) {
+    margin: 0;
+    text-align: right;
+    font-family: "Kalam", "Segoe Print", "Bradley Hand", sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #2a3a6b;
 }
+
 .hm-gb #homeReviews .meta {
-  margin: 0;
-  text-align: right;
-  font-family: "Jost", sans-serif;
-  font-size: 0.8rem;
-  line-height: 2rem;
-  color: #8a7f73;
+    margin: 0;
+    text-align: right;
+    font-family: "Jost", sans-serif;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    color: #8a7f73;
 }
 
 /* actions under the book */
 .hm-rv__foot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem 1.8rem;
-  margin: 2.8rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 1.8rem;
+    margin: 2.8rem 0 0;
 }
+
 .hm-rv__link {
-  font-family: "Jost", sans-serif;
-  font-size: 0.95rem;
-  color: #5e1a28;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: #c9a24a;
+    font-family: "Jost", sans-serif;
+    font-size: 0.95rem;
+    color: #5e1a28;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #c9a24a;
 }
-.hm-rv__link:hover { color: #3a0f19; }
+
+.hm-rv__link:hover {
+    color: #3a0f19;
+}
 
 /* mobile: a single page */
 @media (max-width: 800px) {
-  .hm-gb { padding: 10px; }
-  .hm-gb::before { inset: 4px; }
-  .hm-gb::after { left: auto; right: 2rem; margin-left: 0; }
-  .hm-gb #homeReviews {
-    column-count: 1;
-    background:
-      linear-gradient(90deg, transparent 2.1rem, rgba(196, 70, 70, 0.4) 2.1rem, rgba(196, 70, 70, 0.4) calc(2.1rem + 1px), transparent calc(2.1rem + 1px)),
-      repeating-linear-gradient(180deg, transparent 0 calc(2rem - 1px), rgba(120, 150, 190, 0.35) calc(2rem - 1px) 2rem),
-      #fffaf0;
-  }
-  .hm-gb #homeReviews .panel { padding: 0 1.1rem 0 3.1rem; }
-  .hm-gb #homeReviews .quote { font-size: 1.05rem; }
+    .hm-gb {
+        padding: 10px;
+    }
+
+    .hm-gb::before {
+        inset: 4px;
+    }
+
+    .hm-gb::after {
+        left: auto;
+        right: 2rem;
+        margin-left: 0;
+    }
+
+    .hm-gb #homeReviews {
+        column-count: 1;
+        background:
+            linear-gradient(90deg, transparent 2.1rem, rgba(196, 70, 70, 0.4) 2.1rem, rgba(196, 70, 70, 0.4) calc(2.1rem + 1px), transparent calc(2.1rem + 1px)),
+            repeating-linear-gradient(180deg, transparent 0 calc(2rem - 1px), rgba(120, 150, 190, 0.35) calc(2rem - 1px) 2rem),
+            #fffaf0;
+    }
+
+    .hm-gb #homeReviews .panel {
+        padding: 0 1.1rem 0 3.1rem;
+    }
+
+    .hm-gb #homeReviews .quote {
+        font-size: 1.05rem;
+    }
 }
+
 @media (max-width: 520px) {
-  .hm-rv__foot { flex-direction: column; }
-  .hm-rv__foot .hm-btn { width: 100%; }
+    .hm-rv__foot {
+        flex-direction: column;
+    }
+
+    .hm-rv__foot .hm-btn {
+        width: 100%;
+    }
+}
+
+/* Large screens: scale the whole site and widen the container */
+@media (min-width: 1400px) {
+    .container {
+        width: min(100% - 4rem, 80rem);
+        max-width: none;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 112.5%;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 125%;
+    }
+}
+
+@media (min-width: 2400px) {
+    html {
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 3000px) {
+    html {
+        font-size: 190%;
+    }
+}
+
+/* toran sizes in rem so it scales with the page */
+.hm-tn__rail {
+    height: 2.75rem;
+    background-size: 7.5rem 2.75rem;
+    background-repeat: round no-repeat;
+}
+
+.hm-tn--plain .hm-tn__rail {
+    background-size: 1.5rem 2.75rem;
+}
+
+.hm-tn__thread {
+    width: 0.125rem;
+}
+
+.hm-tn__tassel {
+    width: 0.9rem;
+    height: 1.75rem;
+}
+
+/* five trending cards on very wide screens */
+@media (min-width: 1900px) {
+    .hm-tr__grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   FAQ: questions before you order
+   ========================================================= */
+.hm-faq {
+    background: #f6ecd8;
+    padding: clamp(3rem, 6vw, 5.5rem) 0;
+}
+
+.hm-faq__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    gap: clamp(2rem, 5vw, 5.5rem);
+    align-items: start;
+}
+
+.hm-faq__aside {
+    position: sticky;
+    top: calc(var(--hm-nav, 72px) + 1.5rem);
+}
+
+.hm-faq h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.06;
+    color: #5e1a28;
+    margin: 0 0 0.7rem;
+}
+
+.hm-faq__head p {
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #6b6158;
+    margin: 0;
+}
+
+.hm-faq__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-top: 1.8rem;
+    padding: 1.6rem;
+    border: 1px solid rgba(201, 162, 74, 0.55);
+    border-radius: 0.4rem;
+    color: #fff8ea;
+    background:
+        repeating-linear-gradient(45deg, rgba(201, 162, 74, 0.06) 0 1px, transparent 1px 24px),
+        repeating-linear-gradient(-45deg, rgba(201, 162, 74, 0.06) 0 1px, transparent 1px 24px),
+        radial-gradient(120% 120% at 90% 0%, #6e1f31 0%, #3a0f19 70%);
+}
+
+.hm-faq__card strong {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.1;
+}
+
+.hm-faq__card>span {
+    font-family: "Jost", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #e2d6c0;
+}
+
+.hm-faq__card .hm-btn {
+    margin-top: 0.3rem;
+}
+
+.hm-faq__tel {
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    color: #f6e3a1;
+    text-decoration: none;
+}
+
+.hm-faq__tel:hover {
+    text-decoration: underline;
+}
+
+.hm-faq__card small {
+    font-family: "Jost", sans-serif;
+    font-size: 0.82rem;
+    color: #bfb199;
+}
+
+/* list */
+.hm-faq__list {
+    border-top: 1px solid #d8c99f;
+}
+
+.hm-faq__item {
+    border-bottom: 1px solid #d8c99f;
+}
+
+.hm-faq__item h3 {
+    margin: 0;
+}
+
+.hm-faq__item button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 1.4rem 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: clamp(1.3rem, 1.9vw, 1.7rem);
+    line-height: 1.2;
+    color: #2a2320;
+    transition: color 0.2s ease;
+}
+
+.hm-faq__item button:hover,
+.hm-faq__item.is-open button {
+    color: #5e1a28;
+}
+
+.hm-faq__item button:focus-visible {
+    outline: 2px solid #c9a24a;
+    outline-offset: 3px;
+}
+
+/* plus turns into minus */
+.hm-faq__item button i {
+    position: relative;
+    flex: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid #c9a24a;
+    border-radius: 50%;
+    transition: background 0.25s ease;
+}
+
+.hm-faq__item button i::before,
+.hm-faq__item button i::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.8rem;
+    height: 1.5px;
+    margin: -0.75px 0 0 -0.4rem;
+    background: #5e1a28;
+    transition: transform 0.3s ease;
+}
+
+.hm-faq__item button i::after {
+    transform: rotate(90deg);
+}
+
+.hm-faq__item.is-open button i {
+    background: #c9a24a;
+}
+
+.hm-faq__item.is-open button i::after {
+    transform: rotate(0deg);
+}
+
+/* answer slides open */
+.hm-faq__a {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows 0.4s ease, visibility 0s linear 0.4s;
+}
+
+.hm-faq__item.is-open .hm-faq__a {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.hm-faq__a>div {
+    overflow: hidden;
+}
+
+.hm-faq__a p {
+    max-width: 40rem;
+    margin: 0 0 1.5rem;
+    font-family: "Jost", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #5e554d;
+}
+
+.hm-faq__all {
+    display: inline-block;
+    margin-top: 1.6rem;
+    font-family: "Jost", sans-serif;
+    font-size: 0.95rem;
+    color: #5e1a28;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #c9a24a;
+}
+
+/* tablet and mobile: heading, questions, then the WhatsApp card */
+@media (max-width: 900px) {
+    .hm-faq__grid {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+
+    .hm-faq__aside {
+        display: contents;
+        position: static;
+    }
+
+    .hm-faq__head {
+        order: 0;
+    }
+
+    .hm-faq__list {
+        order: 1;
+    }
+
+    .hm-faq__card {
+        order: 2;
+        margin-top: 0.4rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .hm-faq__card .hm-btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hm-faq__a,
+    .hm-faq__item button i::before,
+    .hm-faq__item button i::after {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   WIDER LAYOUT
+   Tune the width here: --hm-wrap is the maximum, --hm-gutter the side space.
+   ========================================================= */
+:root {
+    --hm-wrap: 118rem;
+    --hm-gutter: clamp(1rem, 4vw, 5rem);
+}
+
+:is(.hm-hero, .hm-cat, .hm-shop, .hm-tr, .hm-pr, .hm-rv, .hm-faq)>.container,
+.topbar .container,
+.newsletter .container,
+footer .container {
+    width: min(100% - 2 * var(--hm-gutter), var(--hm-wrap));
+    max-width: none;
+    margin-inline: auto;
+    padding-inline: 0;
+}
+
+/* inner limits that made sections feel thin */
+.hm-sechead,
+.hm-shop__head {
+    max-width: 56rem;
+}
+
+.hm-faq__a p {
+    max-width: 52rem;
+}
+
+.hm-fan {
+    --w: clamp(9.5rem, 17vw, 19rem);
+}
+
+.hm-fx {
+    padding-inline: clamp(1rem, 4vw, 4.5rem);
+}
+
+.hm-desk h1 {
+    font-size: clamp(2.2rem, 3.4vw, 4.4rem);
+}
+
+.hm-lead {
+    max-width: 38rem;
+}
+
+/* five trending products once there is room */
+@media (min-width: 1500px) {
+    .hm-tr__grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   POPULAR KANKOTRI + GIFT COVERS: wider and bigger
+   ========================================================= */
+.hm-best,
+.hm-more {
+    padding-block: clamp(3.2rem, 6vw, 6rem);
+}
+
+:is(.hm-best, .hm-more)>.container {
+    width: min(100% - 2 * var(--hm-gutter), var(--hm-wrap));
+    max-width: none;
+    margin-inline: auto;
+    padding-inline: 0;
+}
+
+@media (min-width: 1001px) {
+    .hm-best .hm-best__grid {
+        grid-template-columns: minmax(16rem, 23rem) minmax(0, 1fr);
+        gap: clamp(2rem, 4vw, 5rem);
+        align-items: center;
+    }
+
+    .hm-best--gift .hm-best__grid {
+        grid-template-columns: minmax(0, 1fr) minmax(16rem, 23rem);
+    }
+}
+
+.hm-best__cards {
+    gap: clamp(1.2rem, 2.4vw, 2.6rem);
+}
+
+.hm-best h2 {
+    font-size: clamp(2.2rem, 4vw, 4.2rem);
+    line-height: 1.04;
+}
+
+.hm-best__copy p {
+    font-size: clamp(1rem, 1.1vw, 1.15rem);
+}
+
+.hm-best__copy .hm-best__note {
+    font-size: 0.95rem;
+}
+
+.hm-best .hm-pc__body h4 {
+    font-size: clamp(1.5rem, 1.7vw, 2.05rem);
+}
+
+.hm-best .hm-pc__meta {
+    font-size: 0.95rem;
+}
+
+.hm-best .hm-pc__price {
+    font-size: clamp(2rem, 2.2vw, 2.7rem);
+}
+
+.hm-best .hm-pc__wa {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.hm-best .hm-pc__badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+}
+
+.hm-best .hm-pc__count {
+    font-size: clamp(2.8rem, 4.6vw, 4.4rem);
 }

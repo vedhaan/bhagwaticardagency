@@ -1,96 +1,135 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Bhagwati Card Agency — Luxury Wedding Cards & Fine Printing in India</title>
-    <meta name="description" content="Handcrafted luxury wedding invitation cards, gift covers and premium commercial printing in Delhi since 1987. Foiled, embossed and laser-cut in our own press." />
-    <link rel="canonical" href="https://bhagwaticardagency.in/index.html" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/image-layout.css" />
-  </head>
-  <body>
-    <!-- ============================================================= -->
-    <!-- IMAGE EDIT AREA: Change image paths ONLY in HTML <img src="">. -->
-    <!-- CSS controls image width/height. JS controls animation only. -->
-    <!-- Example: <img src="images/your-image.jpg" alt="Your description"> -->
-    <!-- ============================================================= -->
-    <div class="announce">
-      Handcrafted since 1987 · Free sample kit on orders above ₹10,000 ·
-      Worldwide shipping
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bhagwati Card Agency — Luxury Wedding Cards & Fine Printing in India</title>
+  <meta name="description"
+    content="Handcrafted luxury wedding invitation cards, gift covers and premium commercial printing in Delhi since 1987. Foiled, embossed and laser-cut in our own press." />
+  <link rel="canonical" href="https://bhagwaticardagency.in/index.html" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/image-layout.css" />
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("hm-js");
+      var info = { type: "navigate", internal: false, reduce: false, force: false };
+      try {
+        info.force = /[?&]intro=1/.test(location.search);
+        var nav = performance.getEntriesByType("navigation")[0];
+        if (nav) info.type = nav.type;
+        info.internal = !!document.referrer && document.referrer.indexOf(location.origin) === 0;
+        info.reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      } catch (e) { }
+      var skipIntro = !info.force &&
+        (info.type === "back_forward" || (info.type === "navigate" && info.internal));
+      if (!skipIntro) {
+        d.classList.add("hm-intro-on");
+        if (info.reduce && !info.force) d.classList.add("hm-intro-soft");
+      }
+      window.__hmIntro = info;
+    })();
+  </script>
+
+
+  <script>
+    (function () {
+      var desk = document.querySelector(".hm-desk");
+      if (!desk) return;
+      var rows = desk.querySelectorAll(".hm-row");
+      var slides = desk.querySelectorAll(".hm-slide");
+      var sets = desk.querySelectorAll(".hm-chipset");
+      var cur = 0, timer;
+
+      function set(i) {
+        cur = i;
+        rows.forEach(function (el, k) { el.classList.toggle("is-active", k === i); });
+        slides.forEach(function (el, k) { el.classList.toggle("is-active", k === i); });
+        sets.forEach(function (el, k) { el.classList.toggle("is-active", k === i); });
+      }
+      function stop() { clearInterval(timer); }
+      function start() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        stop();
+        timer = setInterval(function () { set((cur + 1) % rows.length); }, 6000);
+      }
+
+      rows.forEach(function (row, i) {
+        row.addEventListener("mouseenter", function () { set(i); });
+        row.addEventListener("focus", function () { set(i); });
+      });
+      desk.addEventListener("mouseenter", stop);
+      desk.addEventListener("mouseleave", start);
+      desk.addEventListener("focusin", stop);
+      desk.addEventListener("focusout", start);
+      start();
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div class="hm-intro">
+    <div class="hm-intro__door hm-intro__door--l"></div>
+    <div class="hm-intro__door hm-intro__door--r"></div>
+    <div class="hm-intro__glow"></div>
+    <div class="hm-intro__emblem">
+      <span class="hm-intro__logo"><img src="images/logo/logo.jpg" alt="" /></span>
+      <span class="hm-intro__name">Bhagwati Card Agency</span>
+      <span class="hm-intro__tag">Kankotri &amp; Gift Covers</span>
     </div>
-    <div class="topbar">
-      <div class="container nav">
-        <a class="logo" href="index.html"
-          ><span class="mark"
-            ><img
-              src="images/logo/logo.jpg"
-              alt="Bhagwati Card Agency Logo"
-              loading="lazy" /></span
-          ><span
-            ><span class="name">Bhagwati</span
-            ><span class="sub">Card Agency</span></span
-          ></a
-        >
-        <nav class="menu desktop-menu">
-          <a href="index.html" class="active">Home</a
-          ><a href="wedding-cards.html">Wedding Cards</a
-          ><a href="invitation-cards.html">Invitations</a
-          ><a href="gift-covers.html">Gift Covers</a
-          ><a href="printing-services.html">Printing</a
-          ><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a
-          ><a href="about.html">About</a><a href="contact.html">Contact</a>
-        </nav>
-        <div class="actions">
-          <a class="btn sm" href="contact.html">Enquire</a
-          ><label
-            class="mobile-trigger"
-            for="mobile-toggle"
-            aria-label="Open menu"
-            >☰</label
-          >
-        </div>
-      </div>
-      <input
-        class="mobile-toggle"
-        type="checkbox"
-        id="mobile-toggle"
-        aria-hidden="true"
-
-
-
-
-
-
-      />
-      <div class="mobile-panel">
-        <div class="container">
-          <a href="index.html">Home</a
-          ><a href="wedding-cards.html">Wedding Cards</a
-          ><a href="invitation-cards.html">Invitations</a
-          ><a href="gift-covers.html">Gift Covers</a
-          ><a href="printing-services.html">Printing</a
-          ><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a
-          ><a href="about.html">About</a><a href="contact.html">Contact</a>
-        </div>
+    <button type="button" class="hm-intro__skip" aria-label="Skip intro animation">Skip</button>
+  </div>
+  <!-- ============================================================= -->
+  <!-- IMAGE EDIT AREA: Change image paths ONLY in HTML <img src="">. -->
+  <!-- CSS controls image width/height. JS controls animation only. -->
+  <!-- Example: <img src="images/your-image.jpg" alt="Your description"> -->
+  <!-- ============================================================= -->
+  <div class="announce">
+    Handcrafted since 1987 · Free sample kit on orders above ₹10,000 ·
+    Worldwide shipping
+  </div>
+  <div class="topbar">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="mark"><img src="images/logo/logo.jpg"
+            alt="Bhagwati Card Agency Logo" loading="lazy" /></span><span><span class="name">Bhagwati</span><span
+            class="sub">Card Agency</span></span></a>
+      <nav class="menu desktop-menu">
+        <a href="index.html" class="active">Home</a><a href="wedding-cards.html">Wedding Cards</a><a
+          href="invitation-cards.html">Invitations</a><a href="gift-covers.html">Gift Covers</a><a
+          href="printing-services.html">Printing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a
+          href="about.html">About</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="actions">
+        <a class="btn sm" href="contact.html">Enquire</a><label class="mobile-trigger" for="mobile-toggle"
+          aria-label="Open menu">☰</label>
       </div>
     </div>
+    <input class="mobile-toggle" type="checkbox" id="mobile-toggle" aria-hidden="true" />
+    <div class="mobile-panel">
+      <div class="container">
+        <a href="index.html">Home</a><a href="wedding-cards.html">Wedding Cards</a><a
+          href="invitation-cards.html">Invitations</a><a href="gift-covers.html">Gift Covers</a><a
+          href="printing-services.html">Printing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a
+          href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
 
 
-
-
-
-
-    <main>
+  <main>
+    <div class="page active">
       <div class="page active">
-        <div class="page active">
-          <section class="hero">
+        <!-- <section class="hero">
             <div class="hero-slider">
               <div
                 class="hero-slide active"
@@ -144,884 +183,1716 @@
                 aria-label="Slide 3"
               ></button>
             </div>
-          </section>
+          </section> -->
 
+
+        <!-- NEW HERO SECTION -->
+        <section class="hm-hero">
           <div class="container">
-            <div class="stats">
-              <div>
-                <div class="n">39+</div>
-                <div class="l">Years of craft</div>
+
+            <!-- MOBILE / TABLET (unchanged design, shown below 901px) -->
+            <div class="hm-mobile">
+              <div class="hm-head">
+                <p class="hm-eyebrow hm-rise" style="--i: 0">Bhagwati Card Agency</p>
+                <h1 class="hm-rise" style="--i: 1">
+                  Find the perfect <em>kankotri and gift covers</em>
+                </h1>
+                <p class="hm-lead hm-rise" style="--i: 2">
+                  Prices on every design. Order directly on WhatsApp.
+                </p>
               </div>
-              <div>
-                <div class="n">40k+</div>
-                <div class="l">Families served</div>
+
+              <div class="hm-split">
+                <div class="hm-col hm-rise" style="--i: 3">
+                  <a class="hm-panel" href="wedding-cards.html">
+                    <img src="images/home/maroon-wedding-card.jpg" alt="Maroon foil wedding kankotri" />
+                    <span class="hm-panel__content">
+                      <span class="hm-panel__num">01</span>
+                      <span class="hm-panel__kicker">320+ designs</span>
+                      <span class="hm-panel__title">Wedding Kankotri</span>
+                      <span class="hm-panel__desc">Foil, laser cut, box and handmade paper invitations for every
+                        tradition.</span>
+                      <span class="hm-panel__cta">Explore kankotri &rarr;</span>
+                    </span>
+                  </a>
+                  <div class="hm-chips">
+                    <a href="wedding-cards.html?style=hindu">Hindu</a>
+                    <a href="wedding-cards.html?style=nikah">Nikah</a>
+                    <a href="wedding-cards.html?style=sikh">Sikh</a>
+                    <a href="wedding-cards.html?style=jain">Jain</a>
+                    <a href="wedding-cards.html?finish=laser-cut">Laser cut</a>
+                  </div>
+                </div>
+
+                <div class="hm-col hm-rise" style="--i: 4.5">
+                  <a class="hm-panel" href="gift-covers.html">
+                    <img src="images/home/shagun-cover.jpg" alt="Shagun gift cover" />
+                    <span class="hm-panel__content">
+                      <span class="hm-panel__num">02</span>
+                      <span class="hm-panel__kicker">140+ designs</span>
+                      <span class="hm-panel__title">Gift Covers</span>
+                      <span class="hm-panel__desc">Shagun envelopes and money covers in velvet, silk and metallic
+                        finishes.</span>
+                      <span class="hm-panel__cta">Explore gift covers &rarr;</span>
+                    </span>
+                  </a>
+                  <div class="hm-chips">
+                    <a href="gift-covers.html?type=shagun">Shagun</a>
+                    <a href="gift-covers.html?type=velvet">Velvet</a>
+                    <a href="gift-covers.html?type=money">Money covers</a>
+                    <a href="gift-covers.html?type=envelope">Envelopes</a>
+                  </div>
+                </div>
               </div>
-              <div>
-                <div class="n">45+</div>
-                <div class="l">Printing techniques</div>
+
+              <ul class="hm-trust hm-rise" style="--i: 6">
+                <li>Prices shown on every design</li>
+                <li>Order directly on WhatsApp</li>
+                <li>Sample kit couriered across India</li>
+              </ul>
+            </div>
+
+            <!-- DESKTOP (shown from 901px) -->
+            <div class="hm-desk">
+              <div class="hm-desk__copy">
+                <p class="hm-eyebrow hm-rise" style="--i: 0">Bhagwati Card Agency</p>
+                <h1 class="hm-rise" style="--i: 1">
+                  Find the perfect <em>kankotri and gift covers</em>
+                </h1>
+                <p class="hm-lead hm-rise" style="--i: 2">
+                  Prices shown on every design. Pick a category and order
+                  directly on WhatsApp.
+                </p>
+
+                <div class="hm-rows hm-rise" style="--i: 3">
+                  <a class="hm-row is-active" href="wedding-cards.html">
+                    <span class="hm-row__num">01</span>
+                    <span>
+                      <strong>Wedding Kankotri</strong>
+                      <small>320+ designs &middot; Foil, laser cut, box, handmade paper</small>
+                    </span>
+                    <span class="hm-row__arrow">&rarr;</span>
+                  </a>
+                  <a class="hm-row" href="gift-covers.html">
+                    <span class="hm-row__num">02</span>
+                    <span>
+                      <strong>Gift Covers</strong>
+                      <small>140+ designs &middot; Shagun, money covers, envelopes</small>
+                    </span>
+                    <span class="hm-row__arrow">&rarr;</span>
+                  </a>
+                </div>
+
+                <p class="hm-desk__label hm-rise" style="--i: 4">Jump straight to</p>
+                <div class="hm-chips hm-chipset is-active hm-rise" style="--i: 4">
+                  <a href="wedding-cards.html?style=hindu">Hindu</a>
+                  <a href="wedding-cards.html?style=nikah">Nikah</a>
+                  <a href="wedding-cards.html?style=sikh">Sikh</a>
+                  <a href="wedding-cards.html?style=jain">Jain</a>
+                  <a href="wedding-cards.html?finish=laser-cut">Laser cut</a>
+                  <a href="wedding-cards.html?finish=box">Box invitations</a>
+                </div>
+                <div class="hm-chips hm-chipset">
+                  <a href="gift-covers.html?type=shagun">Shagun</a>
+                  <a href="gift-covers.html?type=velvet">Velvet</a>
+                  <a href="gift-covers.html?type=money">Money covers</a>
+                  <a href="gift-covers.html?type=envelope">Envelopes</a>
+                </div>
+
+                <ul class="hm-trust hm-rise" style="--i: 5">
+                  <li>Prices on every design</li>
+                  <li>Order on WhatsApp</li>
+                  <li>Sample kit across India</li>
+                </ul>
               </div>
+
+              <div class="hm-stagewrap hm-rise" style="--i: 3">
+                <div class="hm-stage">
+                  <a class="hm-slide is-active" href="wedding-cards.html" aria-label="Browse wedding kankotri">
+                    <img src="images/home/maroon-wedding-card.jpg" alt="Maroon foil wedding kankotri" />
+                    <span class="hm-slide__tag">320+ designs</span>
+                    <span class="hm-slide__card">
+                      <span class="hm-slide__title">Wedding Kankotri</span>
+                      <span class="hm-slide__desc">Foil, laser cut, box and handmade paper invitations for every
+                        tradition.</span>
+                      <span class="hm-slide__cta">Explore kankotri &rarr;</span>
+                    </span>
+                  </a>
+                  <a class="hm-slide" href="gift-covers.html" aria-label="Browse gift covers">
+                    <img src="images/home/shagun-cover.jpg" alt="Shagun gift cover" />
+                    <span class="hm-slide__tag">140+ designs</span>
+                    <span class="hm-slide__card">
+                      <span class="hm-slide__title">Gift Covers</span>
+                      <span class="hm-slide__desc">Shagun envelopes and money covers in velvet, silk and metallic
+                        finishes.</span>
+                      <span class="hm-slide__cta">Explore gift covers &rarr;</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="container">
+          <div class="stats">
+            <div>
+              <div class="n">39+</div>
+              <div class="l">Years of craft</div>
+            </div>
+            <div>
+              <div class="n">40k+</div>
+              <div class="l">Families served</div>
+            </div>
+            <div>
+              <div class="n">45+</div>
+              <div class="l">Printing techniques</div>
+            </div>
+            <div>
+              <div class="n">12</div>
+              <div class="l">Languages typeset</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="hm-shop">
+          <div class="container">
+
+            <header class="hm-shop__head hm-reveal">
+              <p class="hm-kicker">Wedding kankotri</p>
+              <h2>Shop kankotri your way</h2>
+              <p>Choose a tradition, a finish or a budget and go straight to matching designs.</p>
+            </header>
+
+            <h3 class="hm-block__title"><span>By tradition</span></h3>
+            <div class="hm-trad hm-reveal">
+              <a class="hm-tile hm-tile--maroon" href="wedding-cards.html?style=hindu">
+                <span class="hm-tile__idx">01</span>
+                <strong>Hindu</strong>
+                <small>Kalash, Ganesh and traditional motifs</small>
+                <span class="hm-tile__go">Shop designs &rarr;</span>
+              </a>
+              <a class="hm-tile hm-tile--emerald" href="wedding-cards.html?style=nikah">
+                <span class="hm-tile__idx">02</span>
+                <strong>Nikah</strong>
+                <small>Crescent, calligraphy and scroll cards</small>
+                <span class="hm-tile__go">Shop designs &rarr;</span>
+              </a>
+              <a class="hm-tile hm-tile--blue" href="wedding-cards.html?style=sikh">
+                <span class="hm-tile__idx">03</span>
+                <strong>Sikh</strong>
+                <small>Anand Karaj and Khanda laser cut cards</small>
+                <span class="hm-tile__go">Shop designs &rarr;</span>
+              </a>
+              <a class="hm-tile hm-tile--plum" href="wedding-cards.html?style=jain">
+                <span class="hm-tile__idx">04</span>
+                <strong>Jain</strong>
+                <small>Swastik motif and traditional cards</small>
+                <span class="hm-tile__go">Shop designs &rarr;</span>
+              </a>
+            </div>
+
+            <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+              <filter id="hmDeckle" x="-6%" y="-6%" width="112%" height="112%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4" result="n" />
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+            </svg>
+
+            <div class="hm-fx">
+              <div class="hm-fx__head">
+                <h3>The same invitation, five finishes</h3>
+                <p>Hover over a card to see it up close. On a phone, swipe and tap.</p>
+              </div>
+
+              <div class="hm-fan hm-deal">
+
+                <!-- Laser cut -->
+                <a class="hm-fc hm-fc--laser" href="wedding-cards.html?finish=laser-cut" data-finish="laser"
+                  style="--o:-2" aria-label="Laser cut kankotri">
+                  <svg class="hm-fc__art" viewBox="0 0 200 294" aria-hidden="true">
+                    <defs>
+                      <path id="hmP" d="M0 -14 C8 -24 8 -36 0 -46 C-8 -36 -8 -24 0 -14Z" />
+                      <path id="hmQ" d="M0 -66 C6 -72 6 -79 0 -86 C-6 -79 -6 -72 0 -66Z" />
+                      <mask id="hmLaserMask">
+                        <rect width="200" height="294" fill="#fff" />
+                        <g fill="#000" transform="translate(100 112)">
+                          <circle r="7" />
+                          <use href="#hmP" />
+                          <use href="#hmP" transform="rotate(45)" />
+                          <use href="#hmP" transform="rotate(90)" />
+                          <use href="#hmP" transform="rotate(135)" />
+                          <use href="#hmP" transform="rotate(180)" />
+                          <use href="#hmP" transform="rotate(225)" />
+                          <use href="#hmP" transform="rotate(270)" />
+                          <use href="#hmP" transform="rotate(315)" />
+                          <circle r="56" fill="none" stroke="#000" stroke-width="5" stroke-dasharray="0.1 11"
+                            stroke-linecap="round" />
+                          <use href="#hmQ" transform="rotate(22.5)" />
+                          <use href="#hmQ" transform="rotate(67.5)" />
+                          <use href="#hmQ" transform="rotate(112.5)" />
+                          <use href="#hmQ" transform="rotate(157.5)" />
+                          <use href="#hmQ" transform="rotate(202.5)" />
+                          <use href="#hmQ" transform="rotate(247.5)" />
+                          <use href="#hmQ" transform="rotate(292.5)" />
+                          <use href="#hmQ" transform="rotate(337.5)" />
+                        </g>
+                      </mask>
+                      <filter id="hmLaserShadow" x="-5%" y="-5%" width="110%" height="110%">
+                        <feDropShadow dx="0" dy="1.8" stdDeviation="1.5" flood-color="#000" flood-opacity=".65" />
+                      </filter>
+                    </defs>
+                    <rect width="200" height="294" fill="#5e1a28" />
+                    <g filter="url(#hmLaserShadow)">
+                      <rect width="200" height="294" fill="#f6ecd8" mask="url(#hmLaserMask)" />
+                    </g>
+                    <rect x="8" y="8" width="184" height="278" fill="none" stroke="#b08a3e" stroke-width=".8"
+                      opacity=".7" />
+                  </svg>
+                  <span class="hm-fc__txt">
+                    <em>The wedding of</em><strong>Aarav &amp; Meera</strong><em>February 2027</em>
+                  </span>
+                </a>
+
+                <!-- Gold foil -->
+                <a class="hm-fc hm-fc--foil is-active" href="wedding-cards.html?finish=foil" data-finish="foil"
+                  style="--o:-1" aria-label="Gold foil kankotri">
+                  <span class="hm-fc__txt">
+                    <span class="hm-fc__gem"></span>
+                    <em>The wedding of</em><strong>Aarav &amp; Meera</strong><em>February 2027</em>
+                  </span>
+                </a>
+
+                <!-- Box invitation -->
+                <a class="hm-fc hm-fc--box" href="wedding-cards.html?finish=box" data-finish="box" style="--o:0"
+                  aria-label="Box invitation kankotri">
+                  <span class="hm-fc__tray"></span>
+                  <span class="hm-fc__sheet">
+                    <span class="hm-fc__txt"><em>The wedding of</em><strong>Aarav &amp; Meera</strong><em>February
+                        2027</em></span>
+                  </span>
+                  <span class="hm-fc__ribbon"></span>
+                  <span class="hm-fc__clasp"></span>
+                </a>
+
+                <!-- Acrylic -->
+                <a class="hm-fc hm-fc--acrylic" href="wedding-cards.html?finish=acrylic" data-finish="acrylic"
+                  style="--o:1" aria-label="Acrylic kankotri">
+                  <span class="hm-fc__orb"></span>
+                  <span class="hm-fc__txt"><em>The wedding of</em><strong>Aarav &amp; Meera</strong><em>February
+                      2027</em></span>
+                </a>
+
+                <!-- Handmade paper -->
+                <a class="hm-fc hm-fc--paper" href="wedding-cards.html?finish=handmade-paper" data-finish="paper"
+                  style="--o:2" aria-label="Handmade paper kankotri">
+                  <span class="hm-fc__txt"><em>The wedding of</em><strong>Aarav &amp; Meera</strong><em>February
+                      2027</em></span>
+                </a>
+              </div>
+
+              <div class="hm-fx__tabs">
+                <button type="button" data-finish="laser" aria-pressed="false">Laser cut</button>
+                <button type="button" data-finish="foil" aria-pressed="true">Gold foil</button>
+                <button type="button" data-finish="box" aria-pressed="false">Box invitations</button>
+                <button type="button" data-finish="acrylic" aria-pressed="false">Acrylic</button>
+                <button type="button" data-finish="paper" aria-pressed="false">Handmade paper</button>
+              </div>
+
+              <div class="hm-fx__cap">
+                <p class="hm-fx__desc" id="hmFinDesc">Lettering and borders in gold foil that flash as the card moves in
+                  your hand.</p>
+                <a class="hm-btn hm-btn--solid" id="hmFinCta" href="wedding-cards.html?finish=foil">Shop gold foil
+                  kankotri</a>
+              </div>
+            </div>
+
+            <h3 class="hm-block__title"><span>By budget, per card</span></h3>
+            <div class="hm-budget hm-budget--row hm-reveal">
+              <a class="hm-price" href="wedding-cards.html?price=under-100">
+                <span class="hm-price__num">Under &#8377;100</span>
+                <small>Simple, elegant everyday cards</small>
+                <span class="hm-price__go">Shop designs &rarr;</span>
+              </a>
+              <a class="hm-price" href="wedding-cards.html?price=100-200">
+                <span class="hm-price__num">&#8377;100 to &#8377;200</span>
+                <small>Foil, laser cut and premium paper</small>
+                <span class="hm-price__go">Shop designs &rarr;</span>
+              </a>
+              <a class="hm-price" href="wedding-cards.html?price=200-plus">
+                <span class="hm-price__num">&#8377;200 and above</span>
+                <small>Box sets, silk and luxury finishes</small>
+                <span class="hm-price__go">Shop designs &rarr;</span>
+              </a>
+            </div>
+
+            <div class="hm-shop__cta">
+              <a class="hm-btn hm-btn--solid" href="wedding-cards.html">View all kankotri designs</a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ============ SECTION 3: POPULAR KANKOTRI ============ -->
+        <section class="hm-best" id="kankotri">
+          <div class="container hm-best__grid">
+            <div class="hm-best__copy">
+              <h2>Popular kankotri</h2>
+              <p>Foil, laser cut and nikah designs with the price shown upfront. Tap Enquire and the design name goes
+                straight into your WhatsApp message.</p>
+              <p class="hm-best__note">Minimum order is 50 pieces. A sample kit can be couriered before you order.</p>
+              <a class="hm-btn hm-btn--solid" href="wedding-cards.html">View all kankotri</a>
+            </div>
+
+            <div class="hm-best__cards">
+              <article class="hm-pc">
+                <a class="hm-pc__img" href="product-maroon-mughal-foil-invitation.html">
+                  <img src="images/home/maroon-wedding-card.jpg" alt="Maroon Mughal Foil Invitation" loading="lazy" />
+                  <span class="hm-pc__badge">Trending</span>
+                </a>
+                <div class="hm-pc__body">
+                  <h4><a href="product-maroon-mughal-foil-invitation.html">Maroon Mughal Foil Invitation</a></h4>
+                  <p class="hm-pc__meta">Handmade paper, maroon, gold foil</p>
+                  <div class="hm-pc__row">
+                    <span class="hm-pc__price">&#8377;145<small>per piece</small></span>
+                    <a class="hm-pc__wa"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Maroon%20Mughal%20Foil%20Invitation"
+                      target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hm-pc">
+                <a class="hm-pc__img" href="product-ivory-laser-cut-mandala-card.html">
+                  <img src="images/home/mandala-card.jpg" alt="Ivory Laser-Cut Mandala Card" loading="lazy" />
+                  <span class="hm-pc__badge">Bestseller</span>
+                </a>
+                <div class="hm-pc__body">
+                  <h4><a href="product-ivory-laser-cut-mandala-card.html">Ivory Laser-Cut Mandala Card</a></h4>
+                  <p class="hm-pc__meta">Handmade paper, ivory, laser cut</p>
+                  <div class="hm-pc__row">
+                    <span class="hm-pc__price">&#8377;189<small>per piece</small></span>
+                    <a class="hm-pc__wa"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Ivory%20Laser-Cut%20Mandala%20Card"
+                      target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hm-pc">
+                <a class="hm-pc__img" href="wedding-cards.html?style=nikah">
+                  <img src="images/home/nikah-card.jpg" alt="Emerald Nikah Scroll Card" loading="lazy" />
+                  <span class="hm-pc__badge">Trending</span>
+                </a>
+                <div class="hm-pc__body">
+                  <h4><a href="wedding-cards.html?style=nikah">Emerald Nikah Scroll Card</a></h4>
+                  <p class="hm-pc__meta">Silk cloth, emerald, gold foil</p>
+                  <div class="hm-pc__row">
+                    <span class="hm-pc__price">&#8377;260<small>per piece</small></span>
+                    <a class="hm-pc__wa"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Emerald%20Nikah%20Scroll%20Card"
+                      target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SECTION 4: GIFT COVERS ============ -->
+        <section class="hm-best hm-best--gift" id="gift-covers">
+          <div class="container hm-best__grid">
+            <div class="hm-best__cards">
+              <article class="hm-pc">
+                <a class="hm-pc__img" href="gift-covers.html?type=velvet">
+                  <img src="images/home/shagun-cover.jpg" alt="Velvet Shagun Cover in maroon" loading="lazy" />
+                  <span class="hm-pc__badge">Bestseller</span>
+                </a>
+                <div class="hm-pc__body">
+                  <h4><a href="gift-covers.html?type=velvet">Velvet Shagun Cover, Maroon</a></h4>
+                  <p class="hm-pc__meta">Velvet, maroon, gold foil</p>
+                  <div class="hm-pc__row">
+                    <span class="hm-pc__price">&#8377;45<small>per piece</small></span>
+                    <a class="hm-pc__wa"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Velvet%20Shagun%20Cover%20%E2%80%94%20Maroon"
+                      target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hm-pc">
+                <a class="hm-pc__img" href="gift-covers.html">
+                  <img src="images/home/gift-cover-set.jpg" alt="Champagne Foil Gift Cover Set" loading="lazy" />
+                  <span class="hm-pc__badge">Trending</span>
+                </a>
+                <div class="hm-pc__body">
+                  <h4><a href="gift-covers.html">Champagne Foil Gift Cover Set</a></h4>
+                  <p class="hm-pc__meta">Metallic board, gold, gold foil</p>
+                  <div class="hm-pc__row">
+                    <span class="hm-pc__price">&#8377;55<small>per piece</small></span>
+                    <a class="hm-pc__wa"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Champagne%20Foil%20Gift%20Cover%20Set"
+                      target="_blank" rel="noopener">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hm-pc hm-pc--more">
+                <a class="hm-pc__img" href="gift-covers.html">
+                  <img src="images/home/gift-covers.jpg" alt="More gift cover designs" loading="lazy" />
+                  <span class="hm-pc__count">140+<small>designs</small></span>
+                </a>
+                <div class="hm-pc__body">
+                  <h4><a href="gift-covers.html">Every gift cover</a></h4>
+                  <p class="hm-pc__meta">Shagun, money covers, velvet and envelopes</p>
+                  <div class="hm-pc__row">
+                    <a class="hm-pc__wa" href="gift-covers.html">Browse all</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="hm-best__copy">
+              <h2>Gift covers</h2>
+              <p>Shagun envelopes and money covers in velvet, silk and metallic finishes, made to match your kankotri.
+              </p>
+              <div class="hm-chips">
+                <a href="gift-covers.html?type=shagun">Shagun</a>
+                <a href="gift-covers.html?type=velvet">Velvet</a>
+                <a href="gift-covers.html?type=money">Money covers</a>
+                <a href="gift-covers.html?type=envelope">Envelopes</a>
+              </div>
+              <p class="hm-best__note">Minimum order is 25 pieces.</p>
+              <a class="hm-btn hm-btn--solid" href="gift-covers.html">View all gift covers</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SECTION 5: MORE FROM THE PRESS ============ -->
+        <section class="hm-more">
+          <div class="container">
+            <header class="hm-more__head">
+              <h2>More from the press</h2>
+              <p>Invitations for other occasions, wedding accessories, and printing for business.</p>
+            </header>
+
+            <div class="hm-more__groups">
               <div>
-                <div class="n">12</div>
-                <div class="l">Languages typeset</div>
+                <h3 class="hm-block__title"><span>For celebrations</span></h3>
+                <div class="hm-more__tiles" style="--c: 2">
+                  <a class="hm-mt" href="invitation-cards.html">
+                    <span class="hm-mt__img"><img src="images/home/invitation-card.jpg" alt="Invitation cards"
+                        loading="lazy" /></span>
+                    <strong>Invitation cards</strong>
+                    <small>180+ designs</small>
+                  </a>
+                  <a class="hm-mt" href="wedding-accessories.html">
+                    <span class="hm-mt__img"><img src="images/home/wedding-accessory.jpg" alt="Wedding accessories"
+                        loading="lazy" /></span>
+                    <strong>Wedding accessories</strong>
+                    <small>95+ designs</small>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="hm-block__title"><span>For business and bulk orders</span></h3>
+                <div class="hm-more__tiles" style="--c: 4">
+                  <a class="hm-mt" href="corporate-printing.html">
+                    <span class="hm-mt__img"><img src="images/home/corporate-printing.jpg" alt="Corporate printing"
+                        loading="lazy" /></span>
+                    <strong>Corporate printing</strong>
+                    <small>120+ designs</small>
+                  </a>
+                  <a class="hm-mt" href="packaging-printing.html">
+                    <span class="hm-mt__img"><img src="images/home/packaging-printing.jpg" alt="Packaging printing"
+                        loading="lazy" /></span>
+                    <strong>Packaging printing</strong>
+                    <small>88+ designs</small>
+                  </a>
+                  <a class="hm-mt" href="printing-services.html">
+                    <span class="hm-mt__img"><img src="images/home/comercial-printing.jpg" alt="Commercial printing"
+                        loading="lazy" /></span>
+                    <strong>Commercial printing</strong>
+                    <small>150+ designs</small>
+                  </a>
+                  <a class="hm-mt" href="printing-services.html">
+                    <span class="hm-mt__img"><img src="images/home/custom-printing.jpg" alt="Customized printing"
+                        loading="lazy" /></span>
+                    <strong>Customized printing</strong>
+                    <small>200+ designs</small>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <section class="section reveal">
-            <div class="container">
-              <div
-                class="center"
-                style="
+
+        <section class="hm-tr" id="hmTrending">
+          <div class="container">
+            <div class="hm-tr__head">
+              <div>
+                <h2>Trending this season</h2>
+                <p>Current favourites from our catalogue.</p>
+              </div>
+              <div class="hm-tr__tabs" aria-label="Trending category">
+                <button type="button" data-tab="kankotri" aria-pressed="true">Kankotri</button>
+                <button type="button" data-tab="gifts" aria-pressed="false">Gift covers</button>
+              </div>
+            </div>
+
+            <div class="hm-tr__grid" aria-live="polite">
+              <noscript>
+                <p class="hm-tr__msg">Turn on JavaScript to see trending designs, or <a href="wedding-cards.html">browse
+                    all kankotri</a>.</p>
+              </noscript>
+            </div>
+
+            <div class="hm-tr__foot">
+              <a class="hm-btn hm-btn--maroon hm-tr__all" href="wedding-cards.html">View all kankotri</a>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="hm-cat" id="collections">
+          <div class="container">
+            <header class="hm-sechead">
+              <h2>Browse by category</h2>
+              <p>Start with kankotri and gift covers. Invitations, accessories and business printing follow.</p>
+            </header>
+
+            <div class="hm-tn hm-deal">
+              <div class="hm-tn__scroll">
+                <div class="hm-tn__inner">
+                  <div class="hm-tn__rail" aria-hidden="true"></div>
+
+                  <div class="hm-tn__items">
+
+                    <a class="hm-tn__item hm-tn__item--lead" href="wedding-cards.html" style="--len: 1.2rem; --i: 0">
+                      <span class="hm-tn__hang">
+                        <span class="hm-tn__thread"></span>
+                        <span class="hm-tn__card">
+                          <span class="hm-tn__ph"><img src="images/home/wedding-card.jpg" alt="Wedding kankotri"
+                              loading="lazy" /></span>
+                          <span class="hm-tn__txt">
+                            <strong>Wedding kankotri</strong>
+                            <small>320+ designs</small>
+                            <em>Foil, laser cut, box and handmade paper.</em>
+                          </span>
+                        </span>
+                        <span class="hm-tn__tassel"></span>
+                      </span>
+                    </a>
+
+                    <a class="hm-tn__item hm-tn__item--lead" href="gift-covers.html" style="--len: 3.2rem; --i: 1">
+                      <span class="hm-tn__hang">
+                        <span class="hm-tn__thread"></span>
+                        <span class="hm-tn__card">
+                          <span class="hm-tn__ph"><img src="images/home/gift-cover-set.jpg" alt="Gift covers"
+                              loading="lazy" /></span>
+                          <span class="hm-tn__txt">
+                            <strong>Gift covers</strong>
+                            <small>140+ designs</small>
+                            <em>Shagun and money covers in velvet, silk and metallic.</em>
+                          </span>
+                        </span>
+                        <span class="hm-tn__tassel"></span>
+                      </span>
+                    </a>
+
+                    <a class="hm-tn__item" href="invitation-cards.html" style="--len: 2rem; --i: 2">
+                      <span class="hm-tn__hang">
+                        <span class="hm-tn__thread"></span>
+                        <span class="hm-tn__card">
+                          <span class="hm-tn__ph"><img src="images/home/invitation-card.jpg" alt="Invitation cards"
+                              loading="lazy" /></span>
+                          <span class="hm-tn__txt">
+                            <strong>Invitation cards</strong>
+                            <small>180+ designs</small>
+                          </span>
+                        </span>
+                        <span class="hm-tn__tassel"></span>
+                      </span>
+                    </a>
+
+                    <a class="hm-tn__item" href="wedding-accessories.html" style="--len: 4.6rem; --i: 3">
+                      <span class="hm-tn__hang">
+                        <span class="hm-tn__thread"></span>
+                        <span class="hm-tn__card">
+                          <span class="hm-tn__ph"><img src="images/home/wedding-accessory.jpg" alt="Wedding accessories"
+                              loading="lazy" /></span>
+                          <span class="hm-tn__txt">
+                            <strong>Wedding accessories</strong>
+                            <small>95+ designs</small>
+                          </span>
+                        </span>
+                        <span class="hm-tn__tassel"></span>
+                      </span>
+                    </a>
+
+                    <a class="hm-tn__item" href="#press" style="--len: 2.6rem; --i: 4">
+                      <span class="hm-tn__hang">
+                        <span class="hm-tn__thread"></span>
+                        <span class="hm-tn__card">
+                          <span class="hm-tn__ph"><img src="images/home/corporate-printing.jpg"
+                              alt="Printing for business" loading="lazy" /></span>
+                          <span class="hm-tn__txt">
+                            <strong>Printing for business</strong>
+                            <small>Bulk from 1,000</small>
+                          </span>
+                        </span>
+                        <span class="hm-tn__tassel"></span>
+                      </span>
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="hm-pr" id="press">
+          <div class="container">
+            <div class="hm-pr__grid">
+              <div class="hm-pr__copy">
+                <h2>More from the press</h2>
+                <p>The press that prints your kankotri also prints for businesses: stationery, packaging and large jobs
+                  from 1,000 to 100,000 pieces.</p>
+                <ul class="hm-pr__list">
+                  <li>Slab pricing on bulk runs</li>
+                  <li>A dedicated account manager</li>
+                  <li>Staged delivery for large orders</li>
+                </ul>
+                <div class="hm-pr__cta">
+                  <a class="hm-btn hm-btn--solid"
+                    href="https://wa.me/918160008957?text=Hi%2C%20I%20would%20like%20a%20quote%20for%20business%20printing."
+                    target="_blank" rel="noopener">Request a quote on WhatsApp</a>
+                  <a class="hm-btn hm-btn--line" href="printing-services.html">See all printing services</a>
+                </div>
+              </div>
+
+              <div class="hm-pr__tiles">
+                <a class="hm-prt" href="corporate-printing.html">
+                  <img src="images/home/corporate-printing.jpg" alt="Corporate printing" loading="lazy" />
+                  <span><strong>Corporate printing</strong><small>120+ designs</small></span>
+                </a>
+                <a class="hm-prt" href="packaging-printing.html">
+                  <img src="images/home/packaging-printing.jpg" alt="Packaging printing" loading="lazy" />
+                  <span><strong>Packaging printing</strong><small>88+ designs</small></span>
+                </a>
+                <a class="hm-prt" href="printing-services.html">
+                  <img src="images/home/comercial-printing.jpg" alt="Commercial printing" loading="lazy" />
+                  <span><strong>Commercial printing</strong><small>150+ designs</small></span>
+                </a>
+                <a class="hm-prt" href="printing-services.html">
+                  <img src="images/home/custom-printing.jpg" alt="Customized printing" loading="lazy" />
+                  <span><strong>Customized printing</strong><small>200+ designs</small></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="hm-pr__what">
+              <p>Popular jobs</p>
+              <div class="hm-chips">
+                <a href="printing-services.html">Business cards and letterheads</a>
+                <a href="printing-services.html">Brochures and catalogues</a>
+                <a href="printing-services.html">Invoice and bill books</a>
+                <a href="printing-services.html">Certificates and tags</a>
+                <a href="printing-services.html">Rigid boxes</a>
+                <a href="printing-services.html">Foil and emboss</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hm-rv" id="reviews" hidden>
+          <div class="container">
+            <header class="hm-rv__head">
+              <h2>Our guest book</h2>
+              <p>Notes from the families and businesses we have printed for.</p>
+            </header>
+
+            <div class="hm-gb">
+              <div class="grid g2 reviews-grid" id="homeReviews"></div>
+            </div>
+
+            <p class="hm-rv__foot">
+              <a class="hm-btn hm-btn--maroon" href="reviews.html">Write in our guest book</a>
+              <a class="hm-rv__link" href="reviews.html">Read all reviews</a>
+            </p>
+          </div>
+        </section>
+
+
+
+        <!-- 
+        <section class="section reveal">
+          <div class="container">
+            <div class="center" style="
                   max-width: 44rem;
                   margin-inline: auto;
                   margin-bottom: 3rem;
-                "
-              >
-                <p class="eyebrow">Collections</p>
-                <div class="rule"></div>
-                <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
-                  Browse by category
-                </h2>
-                <p class="muted" style="margin-top: 0.8rem">
-                  Eight curated houses of work, from bridal invitations to
-                  production packaging.
+                ">
+              <p class="eyebrow">Collections</p>
+              <div class="rule"></div>
+              <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
+                Browse by category
+              </h2>
+              <p class="muted" style="margin-top: 0.8rem">
+                Eight curated houses of work, from bridal invitations to
+                production packaging.
+              </p>
+            </div>
+            <div class="grid g4">
+              <a class="card" href="wedding-cards.html">
+                <div class="thumb maroon">
+                  <img src="images/home/wedding-card.jpg" alt="Wedding Invitation Cards" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Wedding Invitation Cards</h3>
+                  <p class="meta" style="margin-top: 0.6rem">320+ designs</p>
+                </div>
+              </a><a class="card" href="invitation-cards.html">
+                <div class="thumb gold">
+                  <img src="images/home/invitation-card.jpg" alt="Invitation Cards" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Invitation Cards</h3>
+                  <p class="meta" style="margin-top: 0.6rem">180+ designs</p>
+                </div>
+              </a><a class="card" href="gift-covers.html">
+                <div class="thumb ivory">
+                  <img src="images/home/gift-covers.jpg" alt="Premium Gift Covers" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Premium Gift Covers</h3>
+                  <p class="meta" style="margin-top: 0.6rem">140+ designs</p>
+                </div>
+              </a><a class="card" href="wedding-accessories.html">
+                <div class="thumb maroon">
+                  <img src="images/home/wedding-accessory.jpg" alt="Wedding Accessories" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Wedding Accessories</h3>
+                  <p class="meta" style="margin-top: 0.6rem">95+ designs</p>
+                </div>
+              </a><a class="card" href="corporate-printing.html">
+                <div class="thumb ink">
+                  <img src="images/home/corporate-printing.jpg" alt="Corporate Printing" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Corporate Printing</h3>
+                  <p class="meta" style="margin-top: 0.6rem">120+ designs</p>
+                </div>
+              </a><a class="card" href="packaging-printing.html">
+                <div class="thumb gold">
+                  <img src="images/home/packaging-printing.jpg" alt="Packaging Printing" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Packaging Printing</h3>
+                  <p class="meta" style="margin-top: 0.6rem">88+ designs</p>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb ink">
+                  <img src="images/home/comercial-printing.jpg" alt="Commercial Printing" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Commercial Printing</h3>
+                  <p class="meta" style="margin-top: 0.6rem">150+ designs</p>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb ivory">
+                  <img src="images/home/custom-printing.jpg" alt="Customized Printing" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Customized Printing</h3>
+                  <p class="meta" style="margin-top: 0.6rem">200+ designs</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal" style="background: var(--gold-soft)">
+          <div class="container">
+            <div class="center" style="
+                  max-width: 44rem;
+                  margin-inline: auto;
+                  margin-bottom: 3rem;
+                ">
+              <p class="eyebrow">Signature</p>
+              <div class="rule"></div>
+              <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
+                Trending this season
+              </h2>
+            </div>
+            <div class="grid g4">
+              <article class="card reveal">
+                <div class="thumb maroon">
+                  <img src="images/home/maroon-wedding-card.jpg" alt="Maroon Mughal Foil Invitation"
+                    loading="lazy" /><span class="tag">Trending</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Wedding Cards · Gold Foil</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Maroon Mughal Foil Invitation
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Handmade Paper · Maroon
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹145</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Maroon%20Mughal%20Foil%20Invitation"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb ivory">
+                  <img src="images/home/mandala-card.jpg" alt="Ivory Laser-Cut Mandala Card" loading="lazy" /><span
+                    class="tag">Bestseller</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Wedding Cards · Laser Cut</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Ivory Laser-Cut Mandala Card
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Handmade Paper · Ivory
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹189</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Ivory%20Laser-Cut%20Mandala%20Card"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb ink">
+                  <img src="images/home/nikah-card.jpg" alt="Emerald Nikah Scroll Card" loading="lazy" /><span
+                    class="tag">Trending</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Wedding Cards · Gold Foil</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Emerald Nikah Scroll Card
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Silk Cloth · Emerald
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹260</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Emerald%20Nikah%20Scroll%20Card"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb ivory">
+                  <img src="images/home/reception-card.jpg" alt="Reception Minimal Ivory Invite" loading="lazy" /><span
+                    class="tag">Bestseller</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Invitation Cards · Letterpress</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Reception Minimal Ivory Invite
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Handmade Paper · Ivory
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹85</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Reception%20Minimal%20Ivory%20Invite"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb gold">
+                  <img src="images/home/birthday-card.jpg" alt="Birthday Confetti Foil Card" loading="lazy" /><span
+                    class="tag">Trending</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Invitation Cards · Rose Gold Foil</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Birthday Confetti Foil Card
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Metallic Board · Gold
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹58</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Birthday%20Confetti%20Foil%20Card"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb maroon">
+                  <img src="images/home/shagun-cover.jpg" alt="Velvet Shagun Cover — Maroon" loading="lazy" /><span
+                    class="tag">Bestseller</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Gift Covers · Gold Foil</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Velvet Shagun Cover — Maroon
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Velvet · Maroon
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹45</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Velvet%20Shagun%20Cover%20%E2%80%94%20Maroon"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb gold">
+                  <img src="images/home/gift-cover-set.jpg" alt="Champagne Foil Gift Cover Set" loading="lazy" /><span
+                    class="tag">Trending</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Gift Covers · Gold Foil</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Champagne Foil Gift Cover Set
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Metallic Board · Gold
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹55</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Champagne%20Foil%20Gift%20Cover%20Set"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+              <article class="card reveal">
+                <div class="thumb maroon">
+                  <img src="images/home/weddingtags-scals.avif" alt="Personalised Wedding Tags &amp;amp; Seals"
+                    loading="lazy" /><span class="tag">Trending</span>
+                </div>
+                <div class="body">
+                  <p class="meta">Wedding Accessories · Gold Foil</p>
+                  <h3 style="margin-top: 0.35rem">
+                    Personalised Wedding Tags &amp; Seals
+                  </h3>
+                  <p class="muted" style="font-size: 0.82rem; margin-top: 0.3rem">
+                    Handmade Paper · Maroon
+                  </p>
+                  <div class="price-row" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 0.6rem;
+                      ">
+                    <span class="price">₹240</span>
+                    <a class="btn sm outline"
+                      href="https://wa.me/918160008957?text=Enquiry%20about%20Personalised%20Wedding%20Tags%20%26%20Seals"
+                      target="_blank" rel="noopener">Enquire</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="center" style="margin-top: 2.5rem">
+              <a class="btn" href="categories.html">View all categories</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="container">
+            <div class="center" style="
+                  max-width: 44rem;
+                  margin-inline: auto;
+                  margin-bottom: 3rem;
+                ">
+              <p class="eyebrow">Capabilities</p>
+              <div class="rule"></div>
+              <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
+                45+ printing techniques, one press
+              </h2>
+              <p class="muted" style="margin-top: 0.8rem">
+                From a single wedding card to a 50,000-piece production run
+                — everything is printed and finished in-house.
+              </p>
+            </div>
+            <div class="grid g4">
+              <a class="card" href="printing-services.html">
+                <div class="thumb maroon">
+                  <img src="images/printing/wedding-card-printing.jpg" alt="Wedding Card Printing" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Wedding Card Printing</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb gold">
+                  <img src="images/printing/invitation-envelope-printing.jpg" alt="Invitation & Envelope Printing"
+                    loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Invitation &amp; Envelope Printing</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb ivory">
+                  <img src="images/printing/foil-emboss-printing.jpg" alt="Foil & Emboss Printing" loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Foil &amp; Emboss Printing</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb ink">
+                  <img src="images/printing/business-stationery-printing.jpg" alt="Business Card & Letterhead Printing"
+                    loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Business Card &amp; Letterhead</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb gold">
+                  <img src="images/printing/brochure-catalogue-printing.jpg" alt="Brochure & Catalogue Printing"
+                    loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Brochure &amp; Catalogue Printing</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb maroon">
+                  <img src="images/printing/offset-digital-printing.jpg" alt="Offset & Digital Printing"
+                    loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Offset &amp; Digital Printing</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb ivory">
+                  <img src="images/printing/packaging-box-printing.jpg" alt="Packaging & Rigid Box Printing"
+                    loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Packaging &amp; Rigid Box Printing</h3>
+                </div>
+              </a><a class="card" href="printing-services.html">
+                <div class="thumb ink">
+                  <img src="images/printing/certificate-tag-printing.jpg" alt="Certificate & Tag Printing"
+                    loading="lazy" />
+                </div>
+                <div class="body">
+                  <h3>Certificate &amp; Tag Printing</h3>
+                </div>
+              </a>
+            </div>
+            <div class="center" style="margin-top: 2.5rem">
+              <a class="btn" href="printing-services.html">Explore more</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="container">
+            <div class="center" style="
+                  max-width: 44rem;
+                  margin-inline: auto;
+                  margin-bottom: 3rem;
+                ">
+              <p class="eyebrow">Kind words</p>
+              <div class="rule"></div>
+              <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
+                Families and brands who came back
+              </h2>
+            </div>
+            <div class="grid g2 reviews-grid" id="homeReviews">
+              <div class="panel reveal">
+                <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <p class="quote">
+                  “Every guest asked where our invitations came from. The gold
+                  foil work is simply flawless — and 800 cards were delivered
+                  in nine days.”
                 </p>
-              </div>
-              <div class="grid g4">
-                <a class="card" href="wedding-cards.html"
-                  ><div class="thumb maroon">
-                    <img
-                      src="images/home/wedding-card.jpg"
-                      alt="Wedding Invitation Cards"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Wedding Invitation Cards</h3>
-                    <p class="meta" style="margin-top: 0.6rem">320+ designs</p>
-                  </div></a
-                ><a class="card" href="invitation-cards.html"
-                  ><div class="thumb gold">
-                    <img
-                      src="images/home/invitation-card.jpg"
-                      alt="Invitation Cards"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Invitation Cards</h3>
-                    <p class="meta" style="margin-top: 0.6rem">180+ designs</p>
-                  </div></a
-                ><a class="card" href="gift-covers.html"
-                  ><div class="thumb ivory">
-                    <img
-                      src="images/home/gift-covers.jpg"
-                      alt="Premium Gift Covers"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Premium Gift Covers</h3>
-                    <p class="meta" style="margin-top: 0.6rem">140+ designs</p>
-                  </div></a
-                ><a class="card" href="wedding-accessories.html"
-                  ><div class="thumb maroon">
-                    <img
-                      src="images/home/wedding-accessory.jpg"
-                      alt="Wedding Accessories"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Wedding Accessories</h3>
-                    <p class="meta" style="margin-top: 0.6rem">95+ designs</p>
-                  </div></a
-                ><a class="card" href="corporate-printing.html"
-                  ><div class="thumb ink">
-                    <img
-                      src="images/home/corporate-printing.jpg"
-                      alt="Corporate Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Corporate Printing</h3>
-                    <p class="meta" style="margin-top: 0.6rem">120+ designs</p>
-                  </div></a
-                ><a class="card" href="packaging-printing.html"
-                  ><div class="thumb gold">
-                    <img
-                      src="images/home/packaging-printing.jpg"
-                      alt="Packaging Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Packaging Printing</h3>
-                    <p class="meta" style="margin-top: 0.6rem">88+ designs</p>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb ink">
-                    <img
-                      src="images/home/comercial-printing.jpg"
-                      alt="Commercial Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Commercial Printing</h3>
-                    <p class="meta" style="margin-top: 0.6rem">150+ designs</p>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb ivory">
-                    <img
-                      src="images/home/custom-printing.jpg"
-                      alt="Customized Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Customized Printing</h3>
-                    <p class="meta" style="margin-top: 0.6rem">200+ designs</p>
-                  </div></a
-                >
-              </div>
-            </div>
-          </section>
-
-          <section class="section reveal" style="background: var(--gold-soft)">
-            <div class="container">
-              <div
-                class="center"
-                style="
-                  max-width: 44rem;
-                  margin-inline: auto;
-                  margin-bottom: 3rem;
-                "
-              >
-                <p class="eyebrow">Signature</p>
                 <div class="rule"></div>
-                <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
-                  Trending this season
-                </h2>
+                <p style="font-weight: 500">Aarti &amp; Siddharth</p>
+                <p class="meta">Wedding, Jaipur</p>
               </div>
-              <div class="grid g4">
-                <article class="card reveal">
-                  <div class="thumb maroon">
-                    <img
-                      src="images/home/maroon-wedding-card.jpg"
-                      alt="Maroon Mughal Foil Invitation"
-                      loading="lazy"
-                    /><span class="tag">Trending</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Wedding Cards · Gold Foil</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Maroon Mughal Foil Invitation
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Handmade Paper · Maroon
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹145</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Maroon%20Mughal%20Foil%20Invitation"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb ivory">
-                    <img
-                      src="images/home/mandala-card.jpg"
-                      alt="Ivory Laser-Cut Mandala Card"
-                      loading="lazy"
-                    /><span class="tag">Bestseller</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Wedding Cards · Laser Cut</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Ivory Laser-Cut Mandala Card
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Handmade Paper · Ivory
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹189</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Ivory%20Laser-Cut%20Mandala%20Card"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb ink">
-                    <img
-                      src="images/home/nikah-card.jpg"
-                      alt="Emerald Nikah Scroll Card"
-                      loading="lazy"
-                    /><span class="tag">Trending</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Wedding Cards · Gold Foil</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Emerald Nikah Scroll Card
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Silk Cloth · Emerald
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹260</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Emerald%20Nikah%20Scroll%20Card"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb ivory">
-                    <img
-                      src="images/home/reception-card.jpg"
-                      alt="Reception Minimal Ivory Invite"
-                      loading="lazy"
-                    /><span class="tag">Bestseller</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Invitation Cards · Letterpress</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Reception Minimal Ivory Invite
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Handmade Paper · Ivory
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹85</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Reception%20Minimal%20Ivory%20Invite"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb gold">
-                    <img
-                      src="images/home/birthday-card.jpg"
-                      alt="Birthday Confetti Foil Card"
-                      loading="lazy"
-                    /><span class="tag">Trending</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Invitation Cards · Rose Gold Foil</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Birthday Confetti Foil Card
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Metallic Board · Gold
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹58</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Birthday%20Confetti%20Foil%20Card"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb maroon">
-                    <img
-                      src="images/home/shagun-cover.jpg"
-                      alt="Velvet Shagun Cover — Maroon"
-                      loading="lazy"
-                    /><span class="tag">Bestseller</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Gift Covers · Gold Foil</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Velvet Shagun Cover — Maroon
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Velvet · Maroon
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹45</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Velvet%20Shagun%20Cover%20%E2%80%94%20Maroon"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb gold">
-                    <img
-                      src="images/home/gift-cover-set.jpg"
-                      alt="Champagne Foil Gift Cover Set"
-                      loading="lazy"
-                    /><span class="tag">Trending</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Gift Covers · Gold Foil</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Champagne Foil Gift Cover Set
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Metallic Board · Gold
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹55</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Champagne%20Foil%20Gift%20Cover%20Set"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-                <article class="card reveal">
-                  <div class="thumb maroon">
-                    <img
-                      src="images/home/weddingtags-scals.avif"
-                      alt="Personalised Wedding Tags &amp;amp; Seals"
-                      loading="lazy"
-                    /><span class="tag">Trending</span>
-                  </div>
-                  <div class="body">
-                    <p class="meta">Wedding Accessories · Gold Foil</p>
-                    <h3 style="margin-top: 0.35rem">
-                      Personalised Wedding Tags &amp; Seals
-                    </h3>
-                    <p
-                      class="muted"
-                      style="font-size: 0.82rem; margin-top: 0.3rem"
-                    >
-                      Handmade Paper · Maroon
-                    </p>
-                    <div class="price-row"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      <span class="price">₹240</span>
-                      <a
-                        class="btn sm outline"
-                        href="https://wa.me/918160008957?text=Enquiry%20about%20Personalised%20Wedding%20Tags%20%26%20Seals"
-                        target="_blank"
-                        rel="noopener"
-                        >Enquire</a
-                      >
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="center" style="margin-top: 2.5rem">
-                <a class="btn" href="categories.html">View all categories</a>
-              </div>
-            </div>
-          </section>
-
-          <section class="section reveal">
-            <div class="container">
-              <div
-                class="center"
-                style="
-                  max-width: 44rem;
-                  margin-inline: auto;
-                  margin-bottom: 3rem;
-                "
-              >
-                <p class="eyebrow">Capabilities</p>
-                <div class="rule"></div>
-                <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
-                  45+ printing techniques, one press
-                </h2>
-                <p class="muted" style="margin-top: 0.8rem">
-                  From a single wedding card to a 50,000-piece production run
-                  — everything is printed and finished in-house.
+              <div class="panel reveal">
+                <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <p class="quote">
+                  “They understood the calligraphy detail we wanted without a
+                  single revision round. Truly craftsmen, not just printers.”
                 </p>
+                <div class="rule"></div>
+                <p style="font-weight: 500">Rehan Qureshi</p>
+                <p class="meta">Nikah, Lucknow</p>
               </div>
-              <div class="grid g4">
-                <a class="card" href="printing-services.html"
-                  ><div class="thumb maroon">
-                    <img
-                      src="images/printing/wedding-card-printing.jpg"
-                      alt="Wedding Card Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Wedding Card Printing</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb gold">
-                    <img
-                      src="images/printing/invitation-envelope-printing.jpg"
-                      alt="Invitation & Envelope Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Invitation &amp; Envelope Printing</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb ivory">
-                    <img
-                      src="images/printing/foil-emboss-printing.jpg"
-                      alt="Foil & Emboss Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Foil &amp; Emboss Printing</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb ink">
-                    <img
-                      src="images/printing/business-stationery-printing.jpg"
-                      alt="Business Card & Letterhead Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Business Card &amp; Letterhead</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb gold">
-                    <img
-                      src="images/printing/brochure-catalogue-printing.jpg"
-                      alt="Brochure & Catalogue Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Brochure &amp; Catalogue Printing</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb maroon">
-                    <img
-                      src="images/printing/offset-digital-printing.jpg"
-                      alt="Offset & Digital Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Offset &amp; Digital Printing</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb ivory">
-                    <img
-                      src="images/printing/packaging-box-printing.jpg"
-                      alt="Packaging & Rigid Box Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Packaging &amp; Rigid Box Printing</h3>
-                  </div></a
-                ><a class="card" href="printing-services.html"
-                  ><div class="thumb ink">
-                    <img
-                      src="images/printing/certificate-tag-printing.jpg"
-                      alt="Certificate & Tag Printing"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="body">
-                    <h3>Certificate &amp; Tag Printing</h3>
-                  </div></a
-                >
+              <div class="panel reveal">
+                <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <p class="quote">
+                  “Our entire corporate stationery — letterheads, diaries,
+                  rigid boxes — has been with Bhagwati for six years.
+                  Consistent, always.”
+                </p>
+                <div class="rule"></div>
+                <p style="font-weight: 500">Meera Shah</p>
+                <p class="meta">Director, Shah &amp; Co.</p>
               </div>
-              <div class="center" style="margin-top: 2.5rem">
-                <a class="btn" href="printing-services.html">Explore more</a>
+              <div class="panel reveal">
+                <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <p class="quote">
+                  “The laser-cut Khanda card was beyond what we imagined.
+                  Packaging and delivery were equally premium.”
+                </p>
+                <div class="rule"></div>
+                <p style="font-weight: 500">Gurpreet Singh</p>
+                <p class="meta">Anand Karaj, Amritsar</p>
               </div>
             </div>
-          </section>
 
-          <section class="section reveal">
-            <div class="container">
-              <div
-                class="center"
-                style="
+            <div class="center" style="margin-top: 2.5rem">
+              <a class="btn outline" href="reviews.html">All Reviews</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="container">
+            <div class="center" style="
                   max-width: 44rem;
                   margin-inline: auto;
                   margin-bottom: 3rem;
-                "
-              >
-                <p class="eyebrow">Kind words</p>
-                <div class="rule"></div>
-                <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
-                  Families and brands who came back
-                </h2>
-              </div>
-              <div class="grid g2 reviews-grid" id="homeReviews">
-                <div class="panel reveal">
-                  <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  <p class="quote">
-                    “Every guest asked where our invitations came from. The gold
-                    foil work is simply flawless — and 800 cards were delivered
-                    in nine days.”
-                  </p>
-                  <div class="rule"></div>
-                  <p style="font-weight: 500">Aarti &amp; Siddharth</p>
-                  <p class="meta">Wedding, Jaipur</p>
-                </div>
-                <div class="panel reveal">
-                  <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  <p class="quote">
-                    “They understood the calligraphy detail we wanted without a
-                    single revision round. Truly craftsmen, not just printers.”
-                  </p>
-                  <div class="rule"></div>
-                  <p style="font-weight: 500">Rehan Qureshi</p>
-                  <p class="meta">Nikah, Lucknow</p>
-                </div>
-                <div class="panel reveal">
-                  <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  <p class="quote">
-                    “Our entire corporate stationery — letterheads, diaries,
-                    rigid boxes — has been with Bhagwati for six years.
-                    Consistent, always.”
-                  </p>
-                  <div class="rule"></div>
-                  <p style="font-weight: 500">Meera Shah</p>
-                  <p class="meta">Director, Shah &amp; Co.</p>
-                </div>
-                <div class="panel reveal">
-                  <span class="star-display" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  <p class="quote">
-                    “The laser-cut Khanda card was beyond what we imagined.
-                    Packaging and delivery were equally premium.”
-                  </p>
-                  <div class="rule"></div>
-                  <p style="font-weight: 500">Gurpreet Singh</p>
-                  <p class="meta">Anand Karaj, Amritsar</p>
+                ">
+              <p class="eyebrow">Answers</p>
+              <div class="rule"></div>
+              <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
+                Frequently asked
+              </h2>
+            </div>
+            <div style="max-width: 48rem; margin-inline: auto">
+              <div class="acc">
+                <button type="button">
+                  What is the minimum order quantity for wedding cards?<span>+</span>
+                </button>
+                <div class="a">
+                  Our standard minimum is 50 pieces for wedding invitations
+                  and 25 pieces for gift covers. For bespoke box invitations,
+                  the minimum is 30 pieces.
                 </div>
               </div>
-
-              <div class="center" style="margin-top: 2.5rem">
-                <a class="btn outline" href="reviews.html">All Reviews</a>
+              <div class="acc">
+                <button type="button">
+                  How long does printing and delivery take?<span>+</span>
+                </button>
+                <div class="a">
+                  Digital orders ship in 3–5 working days. Foiling, laser-cut
+                  and box invitations take 7–12 working days after design
+                  approval. Rush production is available on request.
+                </div>
+              </div>
+              <div class="acc">
+                <button type="button">
+                  Can I see a physical sample before ordering?<span>+</span>
+                </button>
+                <div class="a">
+                  Yes. We courier a sample kit of paper stocks and finishes
+                  anywhere in India, and the cost is adjusted against your
+                  final order.
+                </div>
+              </div>
+              <div class="acc">
+                <button type="button">
+                  Do you print matter in Hindi, Urdu, Gujarati or
+                  Punjabi?<span>+</span>
+                </button>
+                <div class="a">
+                  We typeset in over twelve Indian languages with dedicated
+                  proofreading, including Sanskrit shlokas and Quranic verses.
+                </div>
+              </div>
+              <div class="acc">
+                <button type="button">
+                  Do you handle bulk and corporate orders?<span>+</span>
+                </button>
+                <div class="a">
+                  We run offset presses for volumes from 1,000 to 100,000
+                  pieces with slab pricing, dedicated account management and
+                  staged delivery.
+                </div>
               </div>
             </div>
-          </section>
-
-          <section class="section reveal">
-            <div class="container">
-              <div
-                class="center"
-                style="
-                  max-width: 44rem;
-                  margin-inline: auto;
-                  margin-bottom: 3rem;
-                "
-              >
-                <p class="eyebrow">Answers</p>
-                <div class="rule"></div>
-                <h2 style="font-size: clamp(1.9rem, 4vw, 2.7rem)">
-                  Frequently asked
-                </h2>
-              </div>
-              <div style="max-width: 48rem; margin-inline: auto">
-                <div class="acc">
-                  <button type="button">
-                    What is the minimum order quantity for wedding cards?<span
-                      >+</span
-                    >
-                  </button>
-                  <div class="a">
-                    Our standard minimum is 50 pieces for wedding invitations
-                    and 25 pieces for gift covers. For bespoke box invitations,
-                    the minimum is 30 pieces.
-                  </div>
-                </div>
-                <div class="acc">
-                  <button type="button">
-                    How long does printing and delivery take?<span>+</span>
-                  </button>
-                  <div class="a">
-                    Digital orders ship in 3–5 working days. Foiling, laser-cut
-                    and box invitations take 7–12 working days after design
-                    approval. Rush production is available on request.
-                  </div>
-                </div>
-                <div class="acc">
-                  <button type="button">
-                    Can I see a physical sample before ordering?<span>+</span>
-                  </button>
-                  <div class="a">
-                    Yes. We courier a sample kit of paper stocks and finishes
-                    anywhere in India, and the cost is adjusted against your
-                    final order.
-                  </div>
-                </div>
-                <div class="acc">
-                  <button type="button">
-                    Do you print matter in Hindi, Urdu, Gujarati or
-                    Punjabi?<span>+</span>
-                  </button>
-                  <div class="a">
-                    We typeset in over twelve Indian languages with dedicated
-                    proofreading, including Sanskrit shlokas and Quranic verses.
-                  </div>
-                </div>
-                <div class="acc">
-                  <button type="button">
-                    Do you handle bulk and corporate orders?<span>+</span>
-                  </button>
-                  <div class="a">
-                    We run offset presses for volumes from 1,000 to 100,000
-                    pieces with slab pricing, dedicated account management and
-                    staged delivery.
-                  </div>
-                </div>
-              </div>
-              <div class="center" style="margin-top: 2rem">
-                <a class="btn outline" href="faq.html">All questions</a>
-              </div>
+            <div class="center" style="margin-top: 2rem">
+              <a class="btn outline" href="faq.html">All questions</a>
             </div>
+          </div>
 
-    <script>
-      document.querySelectorAll(".acc button").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          btn.parentElement.classList.toggle("open");
+          <script>
+            document.querySelectorAll(".acc button").forEach(function (btn) {
+              btn.addEventListener("click", function () {
+                btn.parentElement.classList.toggle("open");
+              });
+            });
+          </script>
+
+        </section> -->
+      </div>
+    </div>
+  </main>
+
+  <section class="newsletter">
+    <div class="container">
+      <p class="eyebrow" style="color: var(--gold)">Stay in touch</p>
+      <h2 style="font-size: 2rem; margin-top: 0.5rem">
+        New collections, quietly announced.
+      </h2>
+      <p style="color: rgba(255, 253, 248, 0.8); margin-top: 0.6rem">
+        Seasonal invitation launches, paper guides and studio notes — once a
+        month.
+      </p>
+      <form id="newsletterForm">
+        <input id="newsletterEmail" placeholder="you@email.com" required="" type="email" />
+        <button class="btn" style="background: var(--gold); color: #3a1018">
+          Subscribe
+        </button>
+        <p class="msg" id="newsletterMsg" style="flex-basis: 100%; font-size: 0.8rem; color: var(--gold)"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid g4">
+        <div>
+          <div class="logo" style="color: #e9e2d6">
+            <span class="mark"><img src="images/logo/logo.jpg" alt="Bhagwati Card Agency Logo"
+                loading="lazy" /></span><span><span class="name">Bhagwati</span><span class="sub">Card
+                Agency</span></span>
+          </div>
+          <p style="margin-top: 1rem; color: #a89f92">
+            Luxury wedding invitations, gift covers and fine commercial
+            printing from Chandni Chowk, Delhi — since 1987.
+          </p>
+        </div>
+        <div>
+          <h4>Collections</h4>
+          <a href="wedding-cards.html">Wedding Cards</a><a href="invitation-cards.html">Invitation Cards</a><a
+            href="gift-covers.html">Gift Covers</a><a href="wedding-accessories.html">Wedding Accessories</a><a
+            href="corporate-printing.html">Corporate Printing</a><a href="packaging-printing.html">Packaging
+            Printing</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a data-link="" href="about.html">About Us</a><a data-link="" href="gallery.html">Gallery</a><a data-link=""
+            href="blog.html">Blog</a>
+          <a data-link="" href="faq.html">FAQ</a><a data-link="" href="contact.html">Contact</a>
+          <a data-link="" href="privacy-policy.html">Privacy Policy</a><a data-link="" href="terms.html">Terms</a>
+        </div>
+        <div>
+          <h4>Visit the studio</h4>
+          <p style="color: #c9c2b6">
+            Shop 14, Chandni Chowk Market,<br />New Delhi 110006, India
+          </p>
+          <p style="margin-top: 0.6rem">
+            <a href="tel:+918160008957">+91 81600 08957</a>
+          </p>
+          <p>
+            <a href="mailto:hello@bhagwaticardagency.in">hello@bhagwaticardagency.in</a>
+          </p>
+          <p style="color: #a89f92; margin-top: 0.6rem">
+            Mon–Sat 10:00–20:30 · Sun 11:00–17:00
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bhagwati Card Agency. All rights reserved.</span><span>GSTIN 07AABCB1234C1Z5</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="animations.js" defer></script>
+  <script src="js/image-animation.js"></script>
+  <script src="js/filters.js"></script>
+
+
+  <script>
+    (function () {
+      const root = document.getElementById("hmTrending");
+      if (!root || typeof API === "undefined") return;
+
+      /* ---- CONFIG: check the two "cat" values ---- */
+      const WA = "918160008957";
+      const LIMIT = 4;
+      const TABS = {
+        kankotri: { cat: "wedding-cards", noun: "kankotri", all: "wedding-cards.html" },
+        gifts: { cat: "gift-covers", noun: "gift covers", all: "gift-covers.html" },
+      };
+
+      const grid = root.querySelector(".hm-tr__grid");
+      const btns = [...root.querySelectorAll(".hm-tr__tabs button")];
+      const allLink = root.querySelector(".hm-tr__all");
+      const cache = {};
+      let active = "kankotri";
+
+      const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      const first = (...v) => v.find((x) => x !== undefined && x !== null && x !== "");
+
+      const isFlagged = (p) =>
+        p.trending === true || p.is_trending === true || p.featured === true || p.is_featured === true ||
+        /trend|best/i.test(String(first(p.tag, p.badge, p.label, "")));
+      const stamp = (p) => {
+        const d = Date.parse(first(p.created_at, p.createdAt, p.updated_at, ""));
+        return isNaN(d) ? Number(p.id) || 0 : d;
+      };
+      function pick(rows) {
+        const flagged = rows.filter(isFlagged).sort((a, b) => (a.trending_rank || 99) - (b.trending_rank || 99));
+        const rest = rows.filter((p) => !isFlagged(p)).sort((a, b) => stamp(b) - stamp(a));
+        return flagged.concat(rest).slice(0, LIMIT);
+      }
+
+      // Reuse the site's own card renderer to get the correct product link and image
+      function parts(p, catName) {
+        let href = "#", src = "";
+        try {
+          if (typeof cardHTML === "function") {
+            const t = document.createElement("div");
+            t.innerHTML = cardHTML(p, catName);
+            const a = t.querySelector("a"), im = t.querySelector("img");
+            if (a) href = a.getAttribute("href") || "#";
+            if (im) src = im.getAttribute("src") || "";
+          }
+        } catch (e) { }
+        if (!src) src = first(p.image, p.img, p.thumbnail, p.image_url, Array.isArray(p.images) ? p.images[0] : "") || "";
+        return { href, src };
+      }
+
+      function card(p, catName) {
+        const { href, src } = parts(p, catName);
+        const tag = typeof first(p.tag, p.badge) === "string" ? first(p.tag, p.badge) : isFlagged(p) ? "Trending" : "";
+        const price = Number(p.price);
+        const meta = [p.material, p.faith].filter(Boolean).join(", ");
+        const msg = encodeURIComponent("Enquiry about " + p.name);
+        return (
+          '<article class="hm-pc">' +
+          '<a class="hm-pc__img" href="' + esc(href) + '">' +
+          (src ? '<img src="' + esc(src) + '" alt="' + esc(p.name) + '" loading="lazy">' : "") +
+          (tag ? '<span class="hm-pc__badge">' + esc(tag) + "</span>" : "") +
+          "</a>" +
+          '<div class="hm-pc__body"><h4><a href="' + esc(href) + '">' + esc(p.name) + "</a></h4>" +
+          (meta ? '<p class="hm-pc__meta">' + esc(meta) + "</p>" : "") +
+          '<div class="hm-pc__row">' +
+          (price ? '<span class="hm-pc__price">&#8377;' + price.toLocaleString("en-IN") + "</span>" : "<span></span>") +
+          '<a class="hm-pc__wa" href="https://wa.me/' + WA + "?text=" + msg + '" target="_blank" rel="noopener">Enquire on WhatsApp</a>' +
+          "</div></div></article>"
+        );
+      }
+
+      const skeleton = () => '<div class="hm-sk"></div>'.repeat(LIMIT);
+
+      function render(key) {
+        const t = TABS[key], c = cache[key];
+        allLink.href = t.all;
+        allLink.textContent = "View all " + t.noun;
+        grid.setAttribute("aria-busy", "false");
+        grid.innerHTML = c.items.length
+          ? c.items.map((p) => card(p, c.name)).join("")
+          : '<p class="hm-tr__msg">No designs to show yet. <a href="' + t.all + '">Browse all ' + t.noun + "</a>.</p>";
+      }
+
+      async function load(key) {
+        if (cache[key]) return render(key);
+        grid.setAttribute("aria-busy", "true");
+        grid.innerHTML = skeleton();
+        try {
+          const [rows, cats] = await Promise.all([API.list(TABS[key].cat), API.categories()]);
+          cache[key] = { items: pick(rows || []), name: (cats && cats[TABS[key].cat] && cats[TABS[key].cat].name) || TABS[key].cat };
+        } catch (e) {
+          if (key === active) {
+            grid.setAttribute("aria-busy", "false");
+            grid.innerHTML = '<p class="hm-tr__msg">Couldn\'t load trending designs. <button type="button" class="hm-tr__retry">Try again</button></p>';
+          }
+          return;
+        }
+        if (key === active) render(key);
+      }
+
+      btns.forEach((b) =>
+        b.addEventListener("click", () => {
+          active = b.dataset.tab;
+          btns.forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+          load(active);
+        })
+      );
+      grid.addEventListener("click", (e) => { if (e.target.closest(".hm-tr__retry")) load(active); });
+
+      // fetch only when the section is about to be seen
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver((en) => {
+          if (en[0].isIntersecting) { io.disconnect(); load(active); }
+        }, { rootMargin: "400px" });
+        io.observe(root);
+      } else load(active);
+    })();
+  </script>
+  <script>
+    (function () {
+      var rows = document.querySelectorAll(".hm-ix__row");
+      var imgs = document.querySelectorAll(".hm-ix__frame img");
+      var cap = document.getElementById("hmIxCap");
+      if (!rows.length || rows.length !== imgs.length || !cap) return;
+
+      function set(i) {
+        rows.forEach(function (r, k) { r.classList.toggle("is-active", k === i); });
+        imgs.forEach(function (m, k) { m.classList.toggle("is-active", k === i); });
+        cap.textContent = rows[i].getAttribute("data-cap");
+      }
+      rows.forEach(function (r, i) {
+        r.addEventListener("mouseenter", function () { set(i); });
+        r.addEventListener("focus", function () { set(i); });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var slides = document.querySelectorAll(".hero-slide");
+      var dots = document.querySelectorAll(".hero-dot");
+      if (!slides.length) return;
+      var current = 0;
+      var timer;
+
+      function show(i) {
+        slides.forEach(function (s, idx) {
+          s.classList.toggle("active", idx === i);
+        });
+        dots.forEach(function (d, idx) {
+          d.classList.toggle("active", idx === i);
+        });
+        current = i;
+      }
+
+      function next() {
+        show((current + 1) % slides.length);
+      }
+
+      function startTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, 5000);
+      }
+
+      dots.forEach(function (dot, idx) {
+        dot.addEventListener("click", function () {
+          show(idx);
+          startTimer();
         });
       });
-    </script>
 
-          </section>
-        </div>
-      </div>
-    </main>
-    <section class="newsletter">
-      <div class="container">
-        <p class="eyebrow" style="color: var(--gold)">Stay in touch</p>
-        <h2 style="font-size: 2rem; margin-top: 0.5rem">
-          New collections, quietly announced.
-        </h2>
-        <p style="color: rgba(255, 253, 248, 0.8); margin-top: 0.6rem">
-          Seasonal invitation launches, paper guides and studio notes — once a
-          month.
-        </p>
-        <form id="newsletterForm">
-          <input
-            id="newsletterEmail"
-            placeholder="you@email.com"
-            required=""
-            type="email"
-          />
-          <button class="btn" style="background: var(--gold); color: #3a1018">
-            Subscribe
-          </button>
-          <p
-            class="msg"
-            id="newsletterMsg"
-            style="flex-basis: 100%; font-size: 0.8rem; color: var(--gold)"
-          ></p>
-        </form>
-      </div>
-    </section>
-    <footer>
-      <div class="container">
-        <div class="grid g4">
-          <div>
-            <div class="logo" style="color: #e9e2d6">
-              <span class="mark"
-                ><img
-                  src="images/logo/logo.jpg"
-                  alt="Bhagwati Card Agency Logo"
-                  loading="lazy" /></span
-              ><span
-                ><span class="name">Bhagwati</span
-                ><span class="sub">Card Agency</span></span
-              >
-            </div>
-            <p style="margin-top: 1rem; color: #a89f92">
-              Luxury wedding invitations, gift covers and fine commercial
-              printing from Chandni Chowk, Delhi — since 1987.
-            </p>
-          </div>
-          <div>
-            <h4>Collections</h4>
-            <a href="wedding-cards.html">Wedding Cards</a
-            ><a href="invitation-cards.html">Invitation Cards</a
-            ><a href="gift-covers.html">Gift Covers</a
-            ><a href="wedding-accessories.html">Wedding Accessories</a
-            ><a href="corporate-printing.html">Corporate Printing</a
-            ><a href="packaging-printing.html">Packaging Printing</a>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <a data-link="" href="about.html">About Us</a
-            ><a data-link="" href="gallery.html">Gallery</a
-            ><a data-link="" href="blog.html">Blog</a>
-            <a data-link="" href="faq.html">FAQ</a
-            ><a data-link="" href="contact.html">Contact</a>
-            <a data-link="" href="privacy-policy.html">Privacy Policy</a
-            ><a data-link="" href="terms.html">Terms</a>
-          </div>
-          <div>
-            <h4>Visit the studio</h4>
-            <p style="color: #c9c2b6">
-              Shop 14, Chandni Chowk Market,<br />New Delhi 110006, India
-            </p>
-            <p style="margin-top: 0.6rem">
-              <a href="tel:+918160008957">+91 81600 08957</a>
-            </p>
-            <p>
-              <a href="mailto:hello@bhagwaticardagency.in"
-                >hello@bhagwaticardagency.in</a
-              >
-            </p>
-            <p style="color: #a89f92; margin-top: 0.6rem">
-              Mon–Sat 10:00–20:30 · Sun 11:00–17:00
-            </p>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>© 2026 Bhagwati Card Agency. All rights reserved.</span
-          ><span>GSTIN 07AABCB1234C1Z5</span>
-        </div>
-      </div>
-    </footer>
-    <script src="js/config.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/reviews.js"></script>
-    <script src="animations.js" defer></script>
-    <script src="js/image-animation.js"></script>
-    <script src="js/filters.js"></script>
+      startTimer();
+    })();
 
-    <script>
-      (function () {
-        var slides = document.querySelectorAll(".hero-slide");
-        var dots = document.querySelectorAll(".hero-dot");
-        if (!slides.length) return;
-        var current = 0;
-        var timer;
+    (function () {
+      var root = document.documentElement;
+      var played = false;
 
-        function show(i) {
-          slides.forEach(function (s, idx) {
-            s.classList.toggle("active", idx === i);
-          });
-          dots.forEach(function (d, idx) {
-            d.classList.toggle("active", idx === i);
-          });
-          current = i;
-        }
+      function play() {
+        if (played) return;
+        played = true;
+        root.classList.add("hm-play");
+      }
+      function finish() {
+        root.classList.remove("hm-intro-on");
+        play();
+      }
 
-        function next() {
-          show((current + 1) % slides.length);
-        }
+      if (!root.classList.contains("hm-intro-on")) {
+        play();
+        return;
+      }
 
-        function startTimer() {
-          clearInterval(timer);
-          timer = setInterval(next, 5000);
-        }
+      var soft = root.classList.contains("hm-intro-soft");
+      var wide = window.matchMedia("(min-width: 901px)").matches;
+      var intro = document.querySelector(".hm-intro");
+      var door = document.querySelector(".hm-intro__door--l");
+      var skip = document.querySelector(".hm-intro__skip");
 
-        dots.forEach(function (dot, idx) {
-          dot.addEventListener("click", function () {
-            show(idx);
-            startTimer();
-          });
+      setTimeout(play, soft ? 1200 : (wide ? 2600 : 2400));
+
+      if (intro) {
+        intro.addEventListener("animationend", function (e) {
+          if (e.target === (soft ? intro : door)) finish();
         });
+      }
+      if (skip) skip.addEventListener("click", finish);
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") finish();
+      });
+      setTimeout(finish, 5500); // safety net
+    })();
+  </script>
+  <script>
+    (function () {
+      var els = document.querySelectorAll(".hm-reveal");
+      if (!els.length || !("IntersectionObserver" in window)) return;
+      document.documentElement.classList.add("hm-reveal-ready");
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("hm-in");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 
-        startTimer();
-      })();
-    </script>
-  </body>
+  <script>
+    (function () {
+      var els = document.querySelectorAll(".hm-reveal, .hm-deal");
+      if (!els.length || !("IntersectionObserver" in window)) return;
+      document.documentElement.classList.add("hm-reveal-ready");
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("hm-in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.2 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var fan = document.querySelector(".hm-fan");
+      if (!fan) return;
+      var cards = [].slice.call(fan.querySelectorAll(".hm-fc"));
+      var tabs = [].slice.call(document.querySelectorAll(".hm-fx__tabs button"));
+      var desc = document.getElementById("hmFinDesc");
+      var cta = document.getElementById("hmFinCta");
+      var canHover = window.matchMedia("(hover: hover)").matches;
+
+      var data = {
+        laser: { desc: "Fine patterns cut right through the card, so the colour underneath shows through.", cta: "Shop laser cut kankotri", href: "wedding-cards.html?finish=laser-cut" },
+        foil: { desc: "Lettering and borders in gold foil that flash as the card moves in your hand.", cta: "Shop gold foil kankotri", href: "wedding-cards.html?finish=foil" },
+        box: { desc: "The card arrives nested in a velvet or rigid box, tied with a ribbon.", cta: "Shop box invitations", href: "wedding-cards.html?finish=box" },
+        acrylic: { desc: "A clear acrylic card with printed lettering. Light, glossy and modern.", cta: "Shop acrylic kankotri", href: "wedding-cards.html?finish=acrylic" },
+        paper: { desc: "Textured handmade paper with a soft, natural edge. Quiet and eco friendly.", cta: "Shop handmade paper kankotri", href: "wedding-cards.html?finish=handmade-paper" }
+      };
+
+      var cur = "foil";
+      function set(key) {
+        if (key === cur) return;
+        cur = key;
+        cards.forEach(function (c) { c.classList.toggle("is-active", c.dataset.finish === key); });
+        tabs.forEach(function (t) { t.setAttribute("aria-pressed", t.dataset.finish === key ? "true" : "false"); });
+        desc.textContent = data[key].desc;
+        cta.textContent = data[key].cta;
+        cta.href = data[key].href;
+      }
+      function scrollable() { return fan.scrollWidth > fan.clientWidth + 4; }
+
+      cards.forEach(function (c) {
+        if (canHover) c.addEventListener("mouseenter", function () { set(c.dataset.finish); });
+        c.addEventListener("focus", function () { set(c.dataset.finish); });
+        c.addEventListener("click", function (e) {
+          if (cur !== c.dataset.finish) { e.preventDefault(); set(c.dataset.finish); }
+        });
+      });
+      tabs.forEach(function (t) {
+        t.addEventListener("click", function () {
+          set(t.dataset.finish);
+          if (scrollable()) {
+            var c = fan.querySelector('[data-finish="' + t.dataset.finish + '"]');
+            if (c) c.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+          }
+        });
+      });
+
+      var raf;
+      fan.addEventListener("scroll", function () {
+        if (!scrollable()) return;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(function () {
+          var mid = fan.scrollLeft + fan.clientWidth / 2, best = null, bd = 1e9;
+          cards.forEach(function (c) {
+            var d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid);
+            if (d < bd) { bd = d; best = c; }
+          });
+          if (best) set(best.dataset.finish);
+        });
+      }, { passive: true });
+
+      if (scrollable()) {
+        var f = cards[1];
+        fan.scrollLeft = f.offsetLeft + f.offsetWidth / 2 - fan.clientWidth / 2;
+      }
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var grid = document.getElementById("homeReviews");
+      var section = document.getElementById("reviews");
+      if (!grid) return;
+
+      function tidy() {
+        var cards = grid.querySelectorAll(".panel");
+        if (!cards.length) return;
+        if (section) section.hidden = false; // shows only when real reviews exist
+        cards.forEach(function (card) {
+          if (card.dataset.hm) return;
+          card.dataset.hm = "1";
+          var q = card.querySelector(".quote");
+          if (q) q.textContent = q.textContent.replace(/^\s*[\u201C"']\s*/, "").replace(/\s*[\u201D"']\s*$/, "");
+        });
+      }
+      tidy();
+      new MutationObserver(tidy).observe(grid, { childList: true });
+    })();
+  </script>
+</body>
+
 </html>
